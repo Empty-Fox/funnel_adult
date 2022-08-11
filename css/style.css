@@ -120,7 +120,6 @@ height: auto;
   color: white;
   line-height: 100px;
   text-align: center;
-  margin-bottom: 40px;
 }
 .banner300x250 {
   background-color: black;
@@ -131,15 +130,15 @@ height: auto;
   color: white;
   line-height: 250px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .btns_row {
   display: flex;
   justify-content: space-around;
-  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .btns_row button {
@@ -147,7 +146,7 @@ height: auto;
   padding: 4px;
   border-radius: 30px;
   width: 140px;
-  min-height: 40px;
+  min-height: 60px;
   text-align: center;
 }
 
@@ -155,6 +154,7 @@ height: auto;
   text-decoration: none;
   color: white;
   font-size: 16px;
+  font-weight: bold;
 }
 .titleBryndon {
   font-family: "Bryndan";
@@ -245,9 +245,9 @@ height: auto;
 }
 .button-1 {
   color: #fff;
-  border: 3px solid #ed1c24 !important;
-  background-image: -webkit-linear-gradient(30deg, #ed1c24 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #ed1c24 50%, transparent 50%);
+  border: 3px solid #000000 !important;
+  background-image: -webkit-linear-gradient(30deg, #000000 50%, #ead3ff  50%);
+  background-image: linear-gradient(30deg, #000000 50%, #ead3ff  50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -258,24 +258,27 @@ height: auto;
   background-position: 100%;
 }
 .button-1:hover a {
-  color: #ed1c24 !important;
+  color: #000000 !important;
 }
 .button-2 {
-  color: #fff;
-  border: 3px solid #ff914d !important;
-  background-image: -webkit-linear-gradient(30deg, #ff914d 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #ff914d 50%, transparent 50%);
+  color: #8c52ff !important;
+  border: 3px solid #ffffff !important;
+  background-image: -webkit-linear-gradient(30deg, #ffffff 50%, #ead3ff  50%);
+  background-image: linear-gradient(30deg, #ffffff 50%, #ead3ff  50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
+.button-2 a {
+  color: #8c52ff !important;
+}
 .button-2:hover {
   background-position: 100%;
 }
 .button-2:hover a {
-  color: #ff914d !important;
+  color: #8c52ff !important;
 }
 .redblock {
   position: absolute;
@@ -317,9 +320,6 @@ height: auto;
   .btns_row button {
     width: 180px;
   }
-  .btns_row {   
-    max-width: 400px;
-  }
   .titleBryndon {
     font-size: 55px;
   }
@@ -355,9 +355,7 @@ height: auto;
   .btns_row button {
     width: 200px;
   }
-  .btns_row {
-    max-width: 500px;
-  }
+ 
   .titleBryndon {
     font-size: 65px;
   }
@@ -427,6 +425,9 @@ height: auto;
   }
 }
 @media (max-width:500px) {
+  .btns_row button {
+    min-height: 50px;
+  }
   .onerow p {
     font-size: 20px;
   }
