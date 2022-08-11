@@ -41,7 +41,7 @@ body {
 .message_btn {
   display: flex;
   z-index: 9;
-  margin-left: -60px;
+  margin-left: -80px;
   align-items: center;
 }
 
@@ -156,8 +156,7 @@ height: auto;
   font-size: 16px;
   font-weight: bold;
 }
-.titleBryndon {
-  font-family: "Bryndan";
+.titleBryndon { 
   text-align: center;
   font-size: 35px;
   text-decoration: underline;
@@ -180,7 +179,7 @@ height: auto;
 .account_girl {
   text-align: center;
   width: auto;
-  height: 180px;
+  height: 150px;
   background-position-x: center;
   background-position-y: center;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
@@ -205,11 +204,12 @@ height: auto;
 }
 
 .block_online {
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   align-items: flex-start;
   margin-left: -10px;
   gap:10px;
+  justify-content: space-evenly;
 }
 
 .block_img {
@@ -283,10 +283,10 @@ height: auto;
 .redblock {
   position: absolute;
   width: 100%;
-  height: 90px;
+  height: 75px;
   background-color: #fb7a7090;
   bottom: 0;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   color: white;
 }
 .colorRed {
@@ -314,6 +314,12 @@ height: auto;
 }
 
 @media (min-width:600px) {
+  .account_girl {
+    height: 180px;
+  }
+  .redblock {
+    height: 95px;
+  }
   .btns_row button a {
     font-size: 20px;
   }
@@ -327,7 +333,7 @@ height: auto;
     font-size: 70px;
   }
   .onerow p {
-    font-size: 36px;
+    font-size: 30px;
   }
   .blockName {
     padding: 0;
@@ -363,7 +369,7 @@ height: auto;
     font-size: 80px;
   }
   .account_girl {
-    height: 280px;
+    height: 250px;
   }
   .block_img img {
     width: 220px;
@@ -379,16 +385,25 @@ height: auto;
     font-size: 32px;
   }
   .redblock {
-    height: 140px;
+    height: 125px;
   }
   .messageButton p {
     font-size: 36px;
   }
   .onerow p {
-    font-size: 46px;
+    font-size: 40px;
   }
 }
 @media (max-width:800px) {
+  .greenRound {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+  }
+  .block_online {
+    gap: 0;
+    justify-content: center;
+  }
   .onerow.onerow_icons img {
     width: 70px;
     height: auto;
@@ -407,7 +422,20 @@ height: auto;
   .greenRound {
     width: 20px;
     height: 20px;
+    margin-top: 8px;
   }
+  .block_online {
+    padding: 5px 0;    
+    gap: 0;
+  }
+  
+  .account_girl {
+    height: 180px;
+  }
+  .redblock {
+    height: 90px;
+  }
+
   .onerow img {
     width: 70px;
   }
@@ -420,16 +448,27 @@ height: auto;
   .account_style {
     font-size: 25px;
   }
-  .block_online {
-    margin-left: -10px;
-  }
+
 }
 @media (max-width:500px) {
+  .messageButton img {
+    width: 20px;
+    height: auto;
+  }  
+  .messageButton {
+    gap: 3px;
+  }
+  .account_girl {
+    height: 150px;
+  }
+  .redblock {
+    height: 75px;
+  }
   .btns_row button {
     min-height: 50px;
   }
   .onerow p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .blockName {
     margin-left: -10px;
@@ -439,17 +478,17 @@ height: auto;
     height: 120px;
   }
   .onerow img {
-    width: 50px;
+    width: 40px;
     height: auto;
   }
   .onerow.onerow_icons img {
-    width: 40px;    
+    width: 30px;    
   }
   .onerow {
     gap: 0;
   }
   .messageButton img {
-    width: 30px;
+    width: 20px;
     height: auto;
   }
   .messageButton {
@@ -469,12 +508,14 @@ height: auto;
     font-size: 16px;
   }
   .greenRound {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
   }
   .block_online {
     margin-left: 0;
     gap: 0;
+    padding: 5px 0;
   }
 }
 @media (max-width:360px) {
@@ -483,7 +524,7 @@ height: auto;
     height: 10px;
   }
   .onerow img {
-    width: 40px;
+    width: 30px;
     height: auto;
   }
   .message_btn {
@@ -506,6 +547,12 @@ height: auto;
 }
 
 @media (max-width:320px){
+  .account_girl {
+    height: 130px;
+  }
+  .redblock {
+    height: 65px;
+  }
   .messageButton p {
     font-size: 18px;
   }
@@ -520,11 +567,11 @@ height: auto;
     height: 80px;
   }
   .onerow img {
-    width: 50px !important;
+    width: 40px !important;
     height: auto !important;
   }
   .onerow.onerow_icons img {
-    width: 40px !important;
+    width: 30px !important;
     height: auto !important;
   }
   .block_online {
@@ -574,7 +621,7 @@ height: auto;
     height: auto !important;
   }
   .onerow p {
-    font-size: 16px;
+    font-size: 15px;
   }
   .block_online {
     margin-left: -10px;
