@@ -1,15 +1,15 @@
-/* @font-face {
+@font-face {
   font-family: "Anaphora";
-  src: url("/css/Anaphora-Fat-trial.ttf") format("truetype");
+  src: url("/fonts/Anaphora-Fat-trial.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
-} */
-@font-face {
+}
+/* @font-face {
   font-family: "Anaphora";
   src: url("/css/AnaphoraStencil-Fat.woff") format("woff");
   font-style: normal;
   font-weight: normal;
-}
+} */
 @font-face {
   font-family: "Bryndan";
   src: url("/css/BryndanWriteBook-nGPM.ttf") format("truetype");
