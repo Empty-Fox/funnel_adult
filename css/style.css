@@ -4,18 +4,7 @@
   font-style: normal;
   font-weight: normal;
 }
-/* @font-face {
-  font-family: "Anaphora";
-  src: url("/css/AnaphoraStencil-Fat.woff") format("woff");
-  font-style: normal;
-  font-weight: normal;
-} */
-@font-face {
-  font-family: "Bryndan";
-  src: url("/css/BryndanWriteBook-nGPM.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
+
 * {
   scroll-behavior: smooth;
 }
@@ -29,9 +18,6 @@ body {
 }
 
 body {
-  /* background-color: #afa9a9;   */
-  /* background: url("../bg_image/1.jpeg") no-repeat center center fixed;  */
-  /* background: linear-gradient(#ffffff, #fdb4ae82) fixed; */
   background: #ead3ff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
