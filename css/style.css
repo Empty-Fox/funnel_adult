@@ -1,0 +1,561 @@
+@font-face {
+  font-family: "Anaphora";
+  src: url("/css/anaphora.trial-fat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Bryndan";
+  src: url("/css/BryndanWriteBook-nGPM.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #afa9a9;  
+}
+
+.padding5 {
+  padding: 0 5px;
+}
+
+.message_btn {
+  display: flex;
+  z-index: 9;
+  margin-left: -60px;
+  align-items: center;
+}
+
+.messageButton {
+  background-color: #004aad;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap:10px;
+}
+.messageButton p {
+  font-size: 20px;
+  margin: 0;
+}
+.message_btn i {
+  font-size: 22px;
+}
+button:hover {
+  cursor: pointer;
+}
+.onerow {
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap:20px;
+}
+.account_style {
+  text-align: left;
+  font-size: 20px;
+}
+.onerow img {
+  width: 90px;
+  height: auto;
+}
+.messageButton img {
+  width: 60px;
+  height: auto;
+}
+.onerow p {
+  font-size: 26px;
+  margin: 0;
+  text-align: left;
+}
+.onerow.onerow_icons img {
+width: 70px;
+height: auto;
+}
+.blockName p {
+  margin: 0;
+}
+.blockName {
+  padding: 10px 0;
+  margin-left: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_block {
+  width: 100%;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.main_block h1 {
+  text-align: center;
+  font-family: "Anaphora";
+  font-size: 50px;
+  color: #ed1c24;
+}
+
+.banner300x100 {
+  background-color: black;
+  width: 300px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.banner300x250 {
+  background-color: black;
+  width: 300px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  line-height: 250px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btns_row {
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btns_row button {
+  border: none;
+  padding: 4px;
+  border-radius: 30px;
+  width: 140px;
+  min-height: 40px;
+  text-align: center;
+}
+
+.btns_row button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.titleBryndon {
+  font-family: "Bryndan";
+  text-align: center;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+.greenRound {
+  background-color: #008037;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.block_online p {
+  font-size: 18px;
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+.account_girl {
+  text-align: center;
+  width: auto;
+  height: 180px;
+  background-position-x: center;
+  background-position-y: center;
+  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+  border-radius: 20px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: .7fr 1fr .5fr;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+}
+
+.block_img img {
+
+  border-radius: 100%;
+  box-shadow: 0 0 0 5px #d9d9d9, 0 0 13px #d9d9d9;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.block_online {
+  padding: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  margin-left: -10px;
+  gap:10px;
+}
+
+.block_img {
+  position: relative;
+  z-index: 9;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.account_girl>div:nth-child(1) p {
+  position: absolute;
+  background-color: #00000054;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: -5px;
+  margin-left: -15px;
+}
+.messageButton:hover img {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+.container_withGirl_block:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.container_withGirl_block {
+  transition: transform 500ms ease-in-out 25ms;
+}
+.messageButton:hover {
+  cursor: pointer;
+}
+.button-1 {
+  color: #fff;
+  border: 3px solid #ed1c24 !important;
+  background-image: -webkit-linear-gradient(30deg, #ed1c24 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #ed1c24 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.button-1:hover {
+  background-position: 100%;
+}
+.button-1:hover a {
+  color: #ed1c24 !important;
+}
+.button-2 {
+  color: #fff;
+  border: 3px solid #ff914d !important;
+  background-image: -webkit-linear-gradient(30deg, #ff914d 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #ff914d 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.button-2:hover {
+  background-position: 100%;
+}
+.button-2:hover a {
+  color: #ff914d !important;
+}
+.redblock {
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  background-color: #fb7a7090;
+  bottom: 0;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+.main_iconStyle {
+  color: rgba(126, 82, 1, 0.99);
+  padding: 0 5px
+}
+
+.container_withGirl {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+@media (min-width:600px) {
+  .btns_row button a {
+    font-size: 20px;
+  }
+  .btns_row button {
+    width: 180px;
+  }
+  .btns_row {   
+    max-width: 400px;
+  }
+  .titleBryndon {
+    font-size: 55px;
+  }
+  .main_block h1 {
+    font-size: 70px;
+  }
+  .onerow p {
+    font-size: 36px;
+  }
+  .blockName {
+    padding: 0;
+  }
+  .block_online p {
+    font-size: 30px;
+  }
+  .block_online {
+    margin-left: 0px;
+  }
+  .onerow i, .message_btn i {
+    font-size: 26px;
+  }
+  .messageButton p {
+    font-size: 26px;
+  }
+  .onerow i:nth-child(2) {
+    padding: 0 20px;
+  }
+}
+@media (min-width:700px){
+  .btns_row button a {
+    font-size: 26px;
+  }
+  .btns_row button {
+    width: 200px;
+  }
+  .btns_row {
+    max-width: 500px;
+  }
+  .titleBryndon {
+    font-size: 65px;
+  }
+  .main_block h1 {
+    font-size: 80px;
+  }
+  .account_girl {
+    height: 280px;
+  }
+  .block_img img {
+    width: 220px;
+    height: 220px;
+  }
+  .onerow i, .message_btn i {
+    font-size: 46px;
+  }
+  .account_style {
+    font-size: 32px;
+  }
+  .block_online p {
+    font-size: 32px;
+  }
+  .redblock {
+    height: 140px;
+  }
+  .messageButton p {
+    font-size: 36px;
+  }
+  .onerow p {
+    font-size: 46px;
+  }
+}
+@media (max-width:800px) {
+  .onerow.onerow_icons img {
+    width: 70px;
+    height: auto;
+  }
+  .onerow {
+    gap: 10px;
+  }
+  .blockName {
+    margin-left: -10px;
+  }
+  .message_btn {
+    margin-left: -70px;
+  }
+}
+@media (max-width:650px) {
+  .onerow img {
+    width: 70px;
+  }
+  .onerow.onerow_icons img {
+    width: 50px;
+  }
+  .messageButton img {
+    width: 40px;
+  }
+  .account_style {
+    font-size: 25px;
+  }
+  .block_online {
+    margin-left: -10px;
+  }
+}
+@media (max-width:500px) {
+  .onerow p {
+    font-size: 20px;
+  }
+  .blockName {
+    margin-left: -10px;
+  }
+  .account_girl img {
+    width: 120px;
+    height: 120px;
+  }
+  .onerow img {
+    width: 50px;
+    height: auto;
+  }
+  .onerow.onerow_icons img {
+    width: 40px;    
+  }
+  .onerow {
+    gap: 0;
+  }
+  .messageButton img {
+    width: 30px;
+    height: auto;
+  }
+  .messageButton {
+    padding: 15px 10px;
+  }
+  .messageButton p {
+    font-size: 18px;
+    margin: 0;
+  }
+  .message_btn {
+    margin-left: -50px;
+  }
+  .account_style {
+    font-size: 16px;
+  }
+  .block_online p {
+    font-size: 16px;
+  }
+  .greenRound {
+    width: 15px;
+    height: 15px;
+  }
+  .block_online {
+    margin-left: 0;
+    gap: 0;
+  }
+}
+@media (max-width:360px) {
+  .message_btn {
+    margin-left: -60px;
+  }
+  .onerow.onerow_icons img {
+    width: 35px;
+  }
+  .messageButton img {
+    width: 25px;
+    height: auto;
+  }
+  .messageButton {
+    gap: 5px;
+  }
+}
+@media (max-width:320px){
+
+  .messageButton p {
+    font-size: 18px;
+  }
+  .onerow i {
+    font-size: 20px;
+  }
+}
+@media (max-width:320px){
+  .blockName {
+    margin-left: -26px;
+  }
+  .account_girl img {
+    width: 80px;
+    height: 80px;
+  }
+  .onerow img {
+    width: 50px !important;
+    height: auto !important;
+  }
+  .onerow.onerow_icons img {
+    width: 40px !important;
+    height: auto !important;
+  }
+  .block_online {
+    margin-left: 0;
+    gap: 0;
+  }
+  .messageButton img {
+    width: 30px !important;
+    height: auto !important;
+  }
+  .messageButton p {
+    font-size: 14px;
+  }
+  .onerow i {
+    font-size: 18px;
+  }
+  .onerow_icons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .onerow_icons .padding5 {
+    padding: 0;
+  }
+  .banner300x250, .banner300x100 {
+    width: 98%;
+  }
+  .main_block h1 {
+    font-size: 40px;
+  }
+  .messageButton {
+    padding: 15px 10px;
+  }
+  .onerow {
+    justify-content: center;
+  }
+}
+@media (max-width:300px) {
+  .onerow img {
+    width: 30px !important;
+    height: auto !important;
+  }
+  .onerow p {
+    font-size: 16px;
+  }
+  .block_online {
+    margin-left: -10px;
+  }
+  .onerow.onerow_icons img {    
+    width: 25px !important;
+    height: auto !important;
+  }
+  .messageButton img {
+    width: 20px !important;
+    height: auto !important;
+  }
+  .account_girl {
+    height: 120px;
+  }
+  .redblock {
+    height: 60px;
+  }
+
+}
