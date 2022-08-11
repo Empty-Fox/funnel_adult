@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Anaphora";
-  src: url("/css/anaphora.trial-fat.ttf") format("truetype");
+  src: url("/css/Anaphora-Fat-trial.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -627,7 +627,6 @@ nav .logo {
   text-decoration: none;
   font-size: 30px;
   font-family: "Anaphora";
-  font-weight: 100;
 }
 
 nav ul {
