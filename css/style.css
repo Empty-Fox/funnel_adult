@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Anaphora";
-  src: url("/fonts/Anaphora-Fat-trial.ttf") format("truetype");
+  src: url("../fonts/Anaphora-Fat-trial.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
