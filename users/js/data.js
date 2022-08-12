@@ -3,6 +3,7 @@ function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
 
+console.log("data.js")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
