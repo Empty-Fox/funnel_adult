@@ -98,7 +98,8 @@ function addMessageBot_first(classList, message) {
 
     setTimeout((function () {
       messageText_p1.innerText = "",
-        messageText_p1.innerText = message[0][0];
+        // messageText_p1.innerText = message[0][0];
+        messageText_p1.innerText =" message[0][0]";
       messageText_p2.innerText = time;
     }
     ), timeTyping);
