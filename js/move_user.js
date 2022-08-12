@@ -1,7 +1,11 @@
 
     $(document).ready(function () {
   
-  $('.messageButton').on('click', function () {    
+  $('.messageButton').on('click', function (e) { 
+    e.preventDefault();
+
+    setTimeout(() => window.location.replace(document.location.href = 'users/users.html'), 1000)  
+
     var user_name = $(this).closest(".account_girl ").find(".user_name").text();
     var user_name_count = $(this).closest(".account_girl ").find(".user_name").attr('class');
     var user_accountPhoto = $(this).closest(".account_girl ").find('img').get(0).src;
@@ -11,7 +15,7 @@
     localStorage.setItem("user_accountPhoto", user_accountPhoto);
     localStorage.setItem("user_name_count", user_name_count);
     localStorage.setItem("value_click", click_one);
-    document.location.href = 'users/users.html';
+    // document.location.href = 'users/users.html';
   
   });  
   
