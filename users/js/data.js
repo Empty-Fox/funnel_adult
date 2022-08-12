@@ -40,10 +40,7 @@ if ($("#chat-title").find(".user_name").hasClass('user_name6')) {
   var photoUser1 = ["images/10.jpg"]
 }
 url_image = '';
-var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
-    "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
-    "Like it ?"]];
-  var photoUser1 = ["images/10.jpg"]
+
 var today = new Date();
 var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
 var counter = 0, timer = null, I, timer_v = 1000;
