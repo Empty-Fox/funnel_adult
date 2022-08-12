@@ -43,6 +43,8 @@ if ($("#chat-title").find(".user_name").hasClass('user_name6')) {
     "Like it ?"]];
   var photoUser1 = ["images/10.jpg"]
 }
+
+
 url_image = '';
 
 var today = new Date();
