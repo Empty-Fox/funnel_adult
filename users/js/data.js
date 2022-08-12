@@ -5,18 +5,21 @@ function minutes_with_leading_zeros(today) {
 
 console.log("data.js")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
+  console.log('user_name1')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
   var photoUser1 = ["images/10.jpg"]
 }
 if ($("#chat-title").find(".user_name").hasClass('user_name2')) {
+  console.log('user_name2')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
   var photoUser1 = ["images/10.jpg"]
 }
 if ($("#chat-title").find(".user_name").hasClass('user_name3')) {
+  console.log('user_name3')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
