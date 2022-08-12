@@ -3,7 +3,28 @@ function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
 
-console.log("data.js")
+var user_name_ = localStorage.getItem("user_name");
+var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
+var user_name_count_ = localStorage.getItem("user_name_count");
+var click_two = localStorage.getItem("value_click");  
+
+ if (click_two == 1) { 
+  $('.userName_val').text(user_name_); 
+  $(".user_accountPhoto").attr("src",user_accountPhoto_);
+  $( ".userName_val" ).addClass( user_name_count_ );
+ 
+  console.log('user_name_: '+user_name_);
+  console.log('user_accountPhoto_: '+user_accountPhoto_);
+  console.log('user_name_count_: '+user_name_count_);
+  console.log('value_click: '+click_two);
+
+  localStorage.removeItem("user_name"); 
+  localStorage.removeItem("user_accountPhoto"); 
+  localStorage.removeItem("user_name_count"); 
+  localStorage.removeItem("value_click"); 
+  localStorage.clear(); 
+} else {} 
+console.log("data.js new")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
   console.log('user_name1')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
