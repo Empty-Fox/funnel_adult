@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Dating</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/chat.css">
+    <!-- <link rel="icon" href="images/icon.png" sizes="16x16" type="image/png">   -->
+    <style>
+        html {
+            font-size: 10px;
+        }
+    </style>
+    <style>
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, .5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+        }
+
+        .login-box h2 {
+            color: white;
+        }
+
+        .login-box form h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .login-box .user-box {
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="chat-title">
+            <div style="display: flex;">
+                <img src="images/ava.jpg" class="image_profiles1 prof_redirect user_accountPhoto"
+                    style="display: block;" alt="users photo">
+                <div class="signalPresent" id="signalPresent1" style="display: block;"></div>
+            </div>
+            <span class="chat-title chat-title1 userName_val" style="display: block;"></span>
+        </div>
+        <img src="images/back.png" alt="back to chats" id="id_back">
+        <div id="chat-message-list">
+            <div id="container1" class="container1"></div>
+        </div>
+        <div id="chat-form">
+            <input type="text" placeholder="type a message" id="myTextField" class="enter_mes">
+            <img src="images/send-png-md.png" alt="Add Attachment" id="id">
+        </div>
+    </div>
+    <div class="stylick">
+        <div class="login-box">
+            <h2>To continue chatting <br> enter your e-mail</h2>
+            <form id="myForm" action="#" method="POST" novalidate="novalidate">
+                <div class="user-box">
+                    <input type="email" name="email" id="email" required="">
+                    <h2 id="result"></h2>
+                    <label>E-mail</label>
+                </div>
+                <button type="button" class="messageButton_chat" id="submit">CONTINUE</button>
+            </form>
+        </div>
+    </div>
+    <div id="opacityBlock"></div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/move_user.js"></script>
+    <script async src="js/data.js"></script>
+    <script>
+        /////////validate email///////////
+        const validateEmail = (email) => {
+            return email.match(
+                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+        };
+        const validate = () => {
+            const $result = $('#result');
+            const email = $('#email').val();
+            $result.text('');
+
+            if (validateEmail(email)) {
+                $result.text(email + ' is valid :)');
+                $result.css('color', 'green');
+                $('#submit').on('click', openInNewTab)
+
+            } else {
+                $result.text(email + ' is not valid :(');
+                $result.css('color', 'rgb(195 43 43)');
+
+            }
+            return false;
+        }
+        $('#submit').on('click', validate)
+        $('#email').on('input', validate);
+        /////////END validate email///////////
+
+        // ///////message time//////////
+        // var today = new Date();
+        // var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
+        // $('.messageText_p2').text(time);
+        // ///////end message time/////////////
+
+        ////////////висота вікна сайта в моб......
+        const vh = window.innerHeight / 100;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        ///////////////////////////////////////click back in chats/////////////////////////////////      
+
+        $("#id_back").on("click", click_backBTN);
+
+        function click_backBTN() {
+            ok = true;
+            window.open('../index.html', '_self')
+        }
+    </script>
+
+
+    <script>
+
+        // window.confirm = null;
+        // let prevent = false;
+        // let ok = false;
+
+        // var searchString = new URLSearchParams(window.location.search);
+        // var get_campId = searchString.get('camp_id');
+        // var get_banId = searchString.get('ban_id');
+        // var get_sourceId = searchString.get('source_id');
+        // var get_catId = searchString.get('cat_id');
+        // var get_keyId = searchString.get('key_id');
+
+        // var campId = get_campId;
+        // var banId = get_banId;
+        // var sourceId = get_sourceId;
+        // var catId = get_catId;
+        // var keyId = get_keyId;
+
+        // var link1 = 'https://trusersregacy.com/click';
+        // var secondLink = 'https://trusersregacy.com/e75b6cc4-84b7-4cf1-a82f-12888c07c3c7?';
+        // var link2 = secondLink.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}`);
+        // ////////////////////////back link////////
+        // var secondLink_btnBack = 'https://trusersregacy.com/e75b6cc4-84b7-4cf1-a82f-12888c07c3c7?';
+        // var link2_btnBack = secondLink_btnBack.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}`);
+
+        // var openInNewTab = function () {
+        //     ok = true;
+        //     window.open(link1, '_blank').focus();
+        //     window.open(link2, '_self');
+        // };
+        // window.addEventListener('beforeunload', function (e) {
+        //     if (prevent === false && ok === false) {
+        //         setTimeout(function () {
+        //             prevent = true;
+        //             window.location.href = link2_btnBack;
+        //         }, 20);
+        //         e.preventDefault();
+        //         e.returnValue = 'Ok';
+        //         return 'Ok';
+        //     }
+        // });
+
+    </script>
+
+
+</body>
+
+</html>

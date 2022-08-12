@@ -44,6 +44,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   gap:10px;
+  border: none;
 }
 .messageButton p {
   font-size: 20px;
