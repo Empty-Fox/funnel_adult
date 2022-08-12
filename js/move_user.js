@@ -16,22 +16,22 @@
   });  
   
   var user_name_ = localStorage.getItem("user_name");
-  var user_accountPhoto = localStorage.getItem("user_accountPhoto");
-  var user_name_count = localStorage.getItem("user_name_count");
+  var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
+  var user_name_count_ = localStorage.getItem("user_name_count");
   var click_two = localStorage.getItem("value_click");  
 
    if (click_two == 1) { 
     $('.userName_val').text(user_name_); 
-    $(".user_accountPhoto").attr("src",user_accountPhoto);
-    $( ".userName_val" ).addClass( user_name_count );
+    $(".user_accountPhoto").attr("src",user_accountPhoto_);
+    $( ".userName_val" ).addClass( user_name_count_ );
 
 
     console.log('user_name_: '+user_name_);
-    console.log('user_accountPhoto: '+user_accountPhoto);
-    console.log('user_name_count: '+user_name_count);
-    console.log('value_click: '+value_click);
+    console.log('user_accountPhoto_: '+user_accountPhoto_);
+    console.log('user_name_count_: '+user_name_count_);
+    console.log('value_click: '+click_two);
 
-    localStorage.removeItem("user_name_"); 
+    localStorage.removeItem("user_name"); 
     localStorage.removeItem("user_accountPhoto"); 
     localStorage.removeItem("user_name_count"); 
     localStorage.removeItem("value_click"); 
