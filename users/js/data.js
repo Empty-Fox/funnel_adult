@@ -70,7 +70,7 @@ url_image = '';
 
 var today = new Date();
 var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
-var counter = 0, timer = null, I, timer_v = 2000;
+var counter = 0, timer = null, I, timer_v = 3000;
 setTimeout(function() { 
   addMessageBot_first(["message-row", "other-message"], botMessage)
 }, 2000);
@@ -103,7 +103,7 @@ $(document).on('click', '#id', function () {
 var clicks1 = 0, bclicks1 = 0;
 var bclicks2 = 0;
 function addMessageBot_first(classList, message) {
-  var timeTyping = 5e3
+  var timeTyping = Math.floor(3e3 * Math.random()) + 2e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
@@ -133,7 +133,8 @@ function addMessageBot_first(classList, message) {
         messageText_p1.innerText = message[0][0];
       messageText_p2.innerText = time;
     }
-    ), timeTyping);    
+    ), timeTyping);
+    console.log('timeTyping2: '+timeTyping)
     var picture = document.images[0].src;
     messageImage.classList.add("message_content_photo1"),
       messageImage.src = picture
@@ -141,7 +142,7 @@ function addMessageBot_first(classList, message) {
 }
 
 function addMessageBot(classList, message) {
-  var timeTyping = 5e3
+  var timeTyping = Math.floor(4e3 * Math.random()) + 3e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
@@ -186,6 +187,7 @@ function addMessageBot(classList, message) {
       }
     }
     ), timeTyping);
+    console.log('timeTyping1: '+timeTyping)
     var picture = document.images[0].src;
     messageImage.classList.add("message_content_photo1"),
       messageImage.src = picture
