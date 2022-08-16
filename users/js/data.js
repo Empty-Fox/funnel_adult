@@ -79,8 +79,11 @@ function timer_bot(counter) {
   I = setInterval(function () {
     if (timer !== null) { return };
     if (counter++ == 3) {
-      addMessageBot(["message-row", "other-message"], botMessage);
+      setTimeout(function() { 
+        addMessageBot(["message-row", "other-message"], botMessage);
       counter = 0;
+      }, 2000);
+    
     }
   }, timer_v);
 }
@@ -100,7 +103,7 @@ $(document).on('click', '#id', function () {
 var clicks1 = 0, bclicks1 = 0;
 var bclicks2 = 0;
 function addMessageBot_first(classList, message) {
-  var timeTyping = Math.floor(2e3 * Math.random()) + 2e3
+  var timeTyping = 5e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
@@ -130,8 +133,7 @@ function addMessageBot_first(classList, message) {
         messageText_p1.innerText = message[0][0];
       messageText_p2.innerText = time;
     }
-    ), timeTyping);
-
+    ), timeTyping);    
     var picture = document.images[0].src;
     messageImage.classList.add("message_content_photo1"),
       messageImage.src = picture
@@ -139,7 +141,7 @@ function addMessageBot_first(classList, message) {
 }
 
 function addMessageBot(classList, message) {
-  var timeTyping = Math.floor(5e3 * Math.random()) + 4e2
+  var timeTyping = 5e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
