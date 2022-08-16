@@ -70,9 +70,11 @@ url_image = '';
 
 var today = new Date();
 var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
-var counter = 0, timer = null, I, timer_v = 1000;
+var counter = 0, timer = null, I, timer_v = 2000;
+setTimeout(function() { 
+  addMessageBot_first(["message-row", "other-message"], botMessage)
+}, 2000);
 
-addMessageBot_first(["message-row", "other-message"], botMessage)
 function timer_bot(counter) {
   I = setInterval(function () {
     if (timer !== null) { return };
@@ -98,7 +100,7 @@ $(document).on('click', '#id', function () {
 var clicks1 = 0, bclicks1 = 0;
 var bclicks2 = 0;
 function addMessageBot_first(classList, message) {
-  var timeTyping = Math.floor(1e3 * Math.random()) + 1e2
+  var timeTyping = Math.floor(2e3 * Math.random()) + 2e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
@@ -137,7 +139,7 @@ function addMessageBot_first(classList, message) {
 }
 
 function addMessageBot(classList, message) {
-  var timeTyping = Math.floor(1e3 * Math.random()) + 1e2
+  var timeTyping = Math.floor(5e3 * Math.random()) + 4e2
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")

@@ -24,7 +24,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
+.onclick_redirect:hover {
+  cursor: pointer;
+}
 .padding5 {
   padding: 0 5px;
 }
@@ -472,10 +474,10 @@ height: auto;
     height: auto;
   }
   .onerow.onerow_icons img {
-    width: 30px;    
+    width: 35px;    
   }
   .onerow {
-    gap: 0;
+    gap: 5px;
   }
   .messageButton img {
     width: 20px;
@@ -556,8 +558,9 @@ height: auto;
     width: 80px;
     height: 80px;
   }
+
   .onerow img {
-    width: 40px !important;
+    width: 30px !important;
     height: auto !important;
   }
   .onerow.onerow_icons img {
@@ -596,6 +599,7 @@ height: auto;
   }
   .onerow {
     justify-content: center;
+    gap: 0;
   }
 }
 @media (max-width:300px) {
