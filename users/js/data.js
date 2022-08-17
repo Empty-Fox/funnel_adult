@@ -2,6 +2,8 @@
 function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
+
+// ............висота для моб щоб 100vh була: .............
 (function init100vh(){
   function setHeight() {
     var vh = window.innerHeight * 0.01;
@@ -10,6 +12,8 @@ function minutes_with_leading_zeros(today) {
   setHeight();
   window.addEventListener('resize', setHeight);
 })();
+// ...........................................
+
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
 var user_name_count_ = localStorage.getItem("user_name_count");
@@ -25,11 +29,11 @@ var click_two = localStorage.getItem("value_click");
   console.log('user_name_count_: '+user_name_count_);
   console.log('value_click: '+click_two);
 
-  localStorage.removeItem("user_name"); 
-  localStorage.removeItem("user_accountPhoto"); 
-  localStorage.removeItem("user_name_count"); 
-  localStorage.removeItem("value_click"); 
-  localStorage.clear(); 
+  // localStorage.removeItem("user_name"); 
+  // localStorage.removeItem("user_accountPhoto"); 
+  // localStorage.removeItem("user_name_count"); 
+  // localStorage.removeItem("value_click"); 
+  // localStorage.clear(); 
 } else {} 
 console.log("data.js new")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
@@ -78,9 +82,8 @@ url_image = '';
 var today = new Date();
 var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
 var counter = 0, timer = null, I, timer_v = 3000;
-setTimeout(function() { 
-  addMessageBot_first(["message-row", "other-message"], botMessage)
-}, 2000);
+
+
 
 function timer_bot(counter) {
   I = setInterval(function () {
@@ -94,8 +97,14 @@ function timer_bot(counter) {
     }
   }, timer_v);
 }
-timer_bot(counter);
+function asx(){
+  setTimeout(function() { 
+    addMessageBot_first(["message-row", "other-message"], botMessage)
+  }, 2000);
+  timer_bot(counter);
+}
 
+asx();
 function enterMessage() {
   counter = 0;
   var yourMessage = document.getElementById("myTextField").value;
