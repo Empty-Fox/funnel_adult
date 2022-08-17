@@ -14,11 +14,19 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
+window.onbeforeunload = function() {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+
+  return ;
+}
+// ................................
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
 var user_name_count_ = localStorage.getItem("user_name_count");
 var click_two = localStorage.getItem("value_click");  
-
+var click_one_one = localStorage.getItem("click_one_one");  
  if (click_two == 1) { 
   $('.userName_val').text(user_name_); 
   $(".user_accountPhoto").attr("src",user_accountPhoto_);
@@ -28,13 +36,13 @@ var click_two = localStorage.getItem("value_click");
   console.log('user_accountPhoto_: '+user_accountPhoto_);
   console.log('user_name_count_: '+user_name_count_);
   console.log('value_click: '+click_two);
+  console.log('--- click_one_one: '+click_one_one);
+  console.log(localStorage.getItem('htmltest'));
 
-  // localStorage.removeItem("user_name"); 
-  // localStorage.removeItem("user_accountPhoto"); 
-  // localStorage.removeItem("user_name_count"); 
-  // localStorage.removeItem("value_click"); 
-  // localStorage.clear(); 
+
 } else {} 
+
+
 console.log("data.js new")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
   console.log('user_name1')
@@ -76,35 +84,111 @@ if ($("#chat-title").find(".user_name").hasClass('user_name6')) {
   var photoUser1 = ["images/10.jpg"]
 }
 
-
 url_image = '';
-
 var today = new Date();
 var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
 var counter = 0, timer = null, I, timer_v = 3000;
+var local_count=0;
 
 
-
-function timer_bot(counter) {
-  I = setInterval(function () {
-    if (timer !== null) { return };
-    if (counter++ == 3) {
-      setTimeout(function() { 
-        addMessageBot(["message-row", "other-message"], botMessage);
-      counter = 0;
-      }, 2000);
-    
-    }
-  }, timer_v);
+if(localStorage.getItem("click_one_one") == null){
+  console.log('--- null');
+  bot_message();
 }
-function asx(){
+if(localStorage.getItem("click_one_one") == 0){
+  console.log('--- 00000');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  timer_bot1();
+}
+if(localStorage.getItem("click_one_one") == 1){
+  console.log('--- 1111111');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  timer_bot2();
+}
+if(localStorage.getItem("click_one_one") == 2){
+  console.log('--- 2222');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  timer_bot3();
+}
+if(localStorage.getItem("click_one_one") == 3){
+  console.log('--- 3333333');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  timer_bot4();
+}
+if(localStorage.getItem("click_one_one") == 4){
+  console.log('--- 4444444444');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  document.getElementById("opacityBlock").style.display = 'block';
+  document.querySelectorAll(".stylick").forEach(a => a.style.display = "block");
+  $('input').blur();
+  clearInterval(I);
+  timer_v = null;
+
+}
+function bot_message(){
   setTimeout(function() { 
-    addMessageBot_first(["message-row", "other-message"], botMessage)
-  }, 2000);
-  timer_bot(counter);
+    addMessageBot_first(["message-row", "other-message"], botMessage);
+    var click_one_one = 0;
+    localStorage.removeItem("click_one_one")
+    localStorage.setItem("click_one_one", click_one_one);
+    console.log('click_one_one: '+click_one_one);   
+    if(localStorage.getItem("click_one_one") == 0){
+      console.log('00000');
+      timer_bot1();     
+    }   
+  }, 3000);
+   
 }
-
-asx();
+  function timer_bot1() {   
+    setTimeout(function() { 
+      addMessageBot1(["message-row", "other-message"], botMessage);
+      var click_one_one = 1;
+      localStorage.removeItem("click_one_one")
+      localStorage.setItem("click_one_one", click_one_one);
+      console.log('click_one_one1: '+click_one_one);
+      if(localStorage.getItem("click_one_one") == 1){
+        console.log('11111111');
+        timer_bot2();     
+      }   
+    }, 6000);
+    
+  }
+  function timer_bot2() {   
+    setTimeout(function() { 
+      addMessageBot2(["message-row", "other-message"], botMessage);
+      var click_one_one = 2;
+      localStorage.removeItem("click_one_one")
+      localStorage.setItem("click_one_one", click_one_one);
+      console.log('click_one_one2: '+click_one_one);
+      if(localStorage.getItem("click_one_one") == 2){
+        console.log('222222');
+        timer_bot3();     
+      }   
+    }, 8000);    
+  }
+  function timer_bot3() {   
+    setTimeout(function() { 
+      addMessageBotTimer1(["message-row", "other-message"], photoUser1);     
+      var click_one_one = 3;
+      localStorage.removeItem("click_one_one")
+      localStorage.setItem("click_one_one", click_one_one);
+      console.log('click_one_one2: '+click_one_one);
+      if(localStorage.getItem("click_one_one") == 3){
+        console.log('33333');
+        timer_bot4();     
+      }   
+    }, 8000);    
+  }
+  function timer_bot4() {     
+      setTimeout(function() { 
+        addMessageBot3(["message-row", "other-message"], botMessage);
+        var click_one_one = 4;
+        localStorage.removeItem("click_one_one")
+        localStorage.setItem("click_one_one", click_one_one);
+        console.log('click_one_one3: '+click_one_one);       
+      }, 10000); 
+    
+  }
 function enterMessage() {
   counter = 0;
   var yourMessage = document.getElementById("myTextField").value;
@@ -119,7 +203,7 @@ $(document).on('click', '#id', function () {
 var clicks1 = 0, bclicks1 = 0;
 var bclicks2 = 0;
 function addMessageBot_first(classList, message) {
-  var timeTyping = Math.floor(3e3 * Math.random()) + 2e3
+  var timeTyping = Math.floor(2e3 * Math.random()) + 1e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
     , messageImage = document.createElement("img")
@@ -150,14 +234,12 @@ function addMessageBot_first(classList, message) {
       messageText_p2.innerText = time;
     }
     ), timeTyping);
-    console.log('timeTyping2: '+timeTyping)
     var picture = document.images[0].src;
     messageImage.classList.add("message_content_photo1"),
       messageImage.src = picture
   }
 }
-
-function addMessageBot(classList, message) {
+function addMessageBot1(classList, message) {
   var timeTyping = Math.floor(4e3 * Math.random()) + 3e3
     , messageRow = document.createElement("div")
     , messageContent = document.createElement("div")
@@ -177,7 +259,86 @@ function addMessageBot(classList, message) {
     messageText_p2.classList.add("messageText_p2"),
 
     (!document.getElementById("signalPresent1").style.opacity)) {
-    bclicks1 += 1;
+    bclicks1 = 1;
+    var today = new Date();
+    var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
+    document.getElementById("container1").appendChild(messageRow),
+      messageText_p1.innerText = "typing now ....";
+    setTimeout((function () {
+      messageText_p1.innerText = "",
+        messageText_p1.innerText = message[0][bclicks1];
+      messageText_p2.innerText = time;
+      if (bclicks1 == 2) {
+        clearInterval(I);
+        setTimeout(function () {
+          addMessageBotTimer1(["message-row", "other-message"], photoUser1);        
+        }, 4000)
+      }     
+    }
+    ), timeTyping);
+    var picture = document.images[0].src;
+    messageImage.classList.add("message_content_photo1"),
+      messageImage.src = picture
+  }
+}
+function addMessageBot2(classList, message) {
+  var timeTyping = Math.floor(4e3 * Math.random()) + 3e3
+    , messageRow = document.createElement("div")
+    , messageContent = document.createElement("div")
+    , messageImage = document.createElement("img")
+    , messageText = document.createElement("div")
+    , messageText_p1 = document.createElement("p")
+    , messageText_p2 = document.createElement("p");
+
+  if (messageRow.classList.add(...classList),
+    messageContent.classList.add("message-content"),
+    messageText.classList.add("message-text"),
+    messageRow.appendChild(messageContent),
+    messageContent.appendChild(messageImage),
+    messageContent.appendChild(messageText),
+    messageText.appendChild(messageText_p1),
+    messageText.appendChild(messageText_p2),
+    messageText_p2.classList.add("messageText_p2"),
+
+    (!document.getElementById("signalPresent1").style.opacity)) {
+    bclicks1 = 2;
+    var today = new Date();
+    var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
+    document.getElementById("container1").appendChild(messageRow),
+      messageText_p1.innerText = "typing now ....";
+
+    setTimeout((function () {
+      messageText_p1.innerText = "",
+        messageText_p1.innerText = message[0][bclicks1];
+      messageText_p2.innerText = time;    
+    }
+    ), timeTyping);
+    var picture = document.images[0].src;
+    messageImage.classList.add("message_content_photo1"),
+      messageImage.src = picture
+  }
+}
+function addMessageBot3(classList, message) {
+  var timeTyping = Math.floor(4e3 * Math.random()) + 3e3
+    , messageRow = document.createElement("div")
+    , messageContent = document.createElement("div")
+    , messageImage = document.createElement("img")
+    , messageText = document.createElement("div")
+    , messageText_p1 = document.createElement("p")
+    , messageText_p2 = document.createElement("p");
+
+  if (messageRow.classList.add(...classList),
+    messageContent.classList.add("message-content"),
+    messageText.classList.add("message-text"),
+    messageRow.appendChild(messageContent),
+    messageContent.appendChild(messageImage),
+    messageContent.appendChild(messageText),
+    messageText.appendChild(messageText_p1),
+    messageText.appendChild(messageText_p2),
+    messageText_p2.classList.add("messageText_p2"),
+
+    (!document.getElementById("signalPresent1").style.opacity)) {
+    bclicks1 = 3;
     var today = new Date();
     var time = today.getHours() + ":" + minutes_with_leading_zeros(today);
     document.getElementById("container1").appendChild(messageRow),
@@ -187,13 +348,7 @@ function addMessageBot(classList, message) {
       messageText_p1.innerText = "",
         messageText_p1.innerText = message[0][bclicks1];
       messageText_p2.innerText = time;
-      if (bclicks1 == 2) {
-        clearInterval(I);
-        setTimeout(function () {
-          addMessageBotTimer1(["message-row", "other-message"], photoUser1);
-          timer_bot(counter);
-        }, 4000)
-      }
+  
       if (bclicks1 == 3) {
         document.getElementById("opacityBlock").style.display = 'block';
         document.querySelectorAll(".stylick").forEach(a => a.style.display = "block");
@@ -202,13 +357,13 @@ function addMessageBot(classList, message) {
         timer = null;
       }
     }
-    ), timeTyping);
-    console.log('timeTyping1: '+timeTyping)
+    ), timeTyping);    
     var picture = document.images[0].src;
     messageImage.classList.add("message_content_photo1"),
       messageImage.src = picture
   }
 }
+
 function addMessage(classList, message) {
   var messageRow = document.createElement("div")
     , messageContent = document.createElement("div")

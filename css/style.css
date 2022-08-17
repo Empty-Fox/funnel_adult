@@ -16,7 +16,10 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.logo_image {
+  width: 180px;
+  height: fit-content;
+}
 body {
   background: #ead3ff;
   -webkit-background-size: cover;
