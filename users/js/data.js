@@ -99,7 +99,7 @@ if(localStorage.getItem("click_one_one") == null){
 }
 if(localStorage.getItem("click_one_one") == 0){
   alert('--- 00000'+localStorage.getItem("click_one_one"));
-  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  $("#container1").replaceWith('454545');
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
