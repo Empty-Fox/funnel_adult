@@ -21,6 +21,7 @@ function minutes_with_leading_zeros(today) {
 //   return ;
 // }
 
+//////////////for local storage save chat ios (android)
 var timeout;
 $(window).on("beforeunload", function(event) {
     timeout = setTimeout(function() {
@@ -31,7 +32,7 @@ $(window).on("beforeunload", function(event) {
       localStorage.setItem('htmltest', html);
     }, 1);
 
-    return "Do you really want to close?";
+    return;
 });
 
 $(window).on('pagehide', function(e) {
@@ -48,7 +49,7 @@ window.unload = function() {
   localStorage.setItem('htmltest', html);
     clearTimeout(timeout)
 };
-
+//////////////END ////////////////////////////////////////////////
 
 // ................................
 var user_name_ = localStorage.getItem("user_name");
