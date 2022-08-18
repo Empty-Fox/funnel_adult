@@ -95,7 +95,7 @@ if(localStorage.getItem("click_one_one") == null){
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
-  alert('--- 00000');
+  alert('--- 00000'+localStorage.getItem('htmltest'));
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
