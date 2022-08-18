@@ -20,6 +20,36 @@ window.onbeforeunload = function() {
 
   return ;
 }
+
+var timeout;
+$(window).on("beforeunload", function(event) {
+    timeout = setTimeout(function() {
+      $(window).unbind("beforeunload");
+
+      var html=$('#container1')[0].outerHTML;
+      localStorage.removeItem("htmltest");
+      localStorage.setItem('htmltest', html);
+    }, 1);
+
+    return "Do you really want to close?";
+});
+
+$(window).on('pagehide', function(e) {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+  
+  e.preventDefault();
+})
+
+window.unload = function() {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+    clearTimeout(timeout)
+};
+
+
 // ................................
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
@@ -96,12 +126,12 @@ if(localStorage.getItem("click_one_one") == null){
 }
 if(localStorage.getItem("click_one_one") == 0){
   console.log('--- 00000');
-  // $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
   console.log('--- 1111111');
-  // $("#container1").replaceWith(localStorage.getItem('htmltest'));
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot2();
 }
 if(localStorage.getItem("click_one_one") == 2){
