@@ -3,15 +3,7 @@ function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
 
-// ............висота для моб щоб 100vh була: .............
-(function init100vh(){
-  function setHeight() {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-  setHeight();
-  window.addEventListener('resize', setHeight);
-})();
+
 // ...........................................
 
 window.onbeforeunload = function() {
