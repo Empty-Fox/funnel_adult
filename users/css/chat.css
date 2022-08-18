@@ -71,6 +71,7 @@ body {
     z-index: 9;
     right: 5%;
     top: 15px;
+    display: none;
 }
 #id_back:hover {
     cursor: pointer;
@@ -96,7 +97,8 @@ body {
 }
 
 #chat-title {
-    display: grid;
+    /* display: grid; */
+    display: none;
     grid-template-columns: 80px auto;
     align-content: center;
     align-items: center;
@@ -113,7 +115,8 @@ body {
 
 #chat-message-list {
     grid-area: chat-message-list;
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column-reverse;
     padding: 0 20px;
     overflow-y: scroll;
@@ -287,10 +290,6 @@ img.message-text_img {
 
 ::-webkit-scrollbar {
     display: none
-}
-
-#chat-message-list {
-    display: flex;
 }
 
 
