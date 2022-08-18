@@ -88,6 +88,7 @@ body {
     width: 60px;
     border-radius: 100%;
     box-shadow: 0 0 0 2px #d9d9d9, 0 0 13px #d9d9d9;
+    height: auto;
 }
 
 #chat-title {
