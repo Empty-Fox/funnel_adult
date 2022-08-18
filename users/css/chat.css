@@ -11,10 +11,13 @@ html {
     height: 100%
 }
 body {
-    display: grid;
+    /* display: grid; */
     place-items: center;
     background-color: #fff;
     font-family: Kanit, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
     /* ..........для висоти моб...... */
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
@@ -253,8 +256,8 @@ img.message-text_img {
 }
 
 #chat-form {
-    /* display: grid;
-    grid: 32px/1fr auto; */
+    display: grid;
+    grid: 32px/1fr auto;
     align-content: center;
     align-items: center;
     grid-gap: 15px;
