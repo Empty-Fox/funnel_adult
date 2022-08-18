@@ -17,7 +17,12 @@ window.onbeforeunload = function() {
   var html=$('#container1')[0].outerHTML;
   localStorage.removeItem("htmltest");
   localStorage.setItem('htmltest', html);
-
+  return ;
+}
+window.unload = function() {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
   return ;
 }
 // ................................
