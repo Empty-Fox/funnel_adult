@@ -13,16 +13,13 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-window.onbeforeunload = function(e) {
-  
+window.onbeforeunload = function() {
   var html=$('#container1')[0].outerHTML;
   localStorage.removeItem("htmltest");
   localStorage.setItem('htmltest', html);
+
   return ;
 }
-
-
-
 // ................................
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
@@ -94,47 +91,30 @@ var local_count=0;
 
 
 if(localStorage.getItem("click_one_one") == null){
-  alert('--- null'+localStorage.getItem("click_one_one"));
-
-  
+  console.log('--- null');
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
-  alert('--- 00000'+localStorage.getItem("click_one_one"));
-  $("#container1").replaceWith(localStorage.getItem('htmltest'));
-
-  var html=$('#container1')[0].outerHTML;
-  localStorage.removeItem("htmltest");
-  localStorage.setItem('htmltest', html);
-
-
+  console.log('--- 00000');
+  // $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
-  alert('--- 1111111'+localStorage.getItem("click_one_one"));
-  $("#container1").replaceWith(localStorage.getItem('htmltest'));
-
-  var html=$('#container1')[0].outerHTML;
-  localStorage.removeItem("htmltest");
-  localStorage.setItem('htmltest', html);
-
-  
+  console.log('--- 1111111');
+  // $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot2();
 }
 if(localStorage.getItem("click_one_one") == 2){
-  alert('--- 22222222'+localStorage.getItem('htmltest'));
   console.log('--- 2222');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot3();
 }
 if(localStorage.getItem("click_one_one") == 3){
-  alert('--- 33'+localStorage.getItem('htmltest'));
   console.log('--- 3333333');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot4();
 }
 if(localStorage.getItem("click_one_one") == 4){
-  alert('--- 4444444444'+localStorage.getItem('htmltest'));
   console.log('--- 4444444444');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   document.getElementById("opacityBlock").style.display = 'block';
