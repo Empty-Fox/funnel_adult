@@ -13,27 +13,27 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-// window.onbeforeunload = function() {
-//   var html=$('#container1')[0].outerHTML;
-//   localStorage.removeItem("htmltest");
-//   localStorage.setItem('htmltest', html);
+window.onbeforeunload = function() {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
 
-//   return ;
-// }
+  return ;
+}
 
 //////////////for local storage save chat ios (android)
 var timeout;
-$(window).on("beforeunload", function(event) {
-    timeout = setTimeout(function() {
-      $(window).unbind("beforeunload");
+// $(window).on("beforeunload", function(event) {
+//     timeout = setTimeout(function() {
+//       $(window).unbind("beforeunload");
 
-      var html=$('#container1')[0].outerHTML;
-      localStorage.removeItem("htmltest");
-      localStorage.setItem('htmltest', html);
-    }, 1);
+//       var html=$('#container1')[0].outerHTML;
+//       localStorage.removeItem("htmltest");
+//       localStorage.setItem('htmltest', html);
+//     }, 1);
 
-    return;
-});
+//     return;
+// });
 
 $(window).on('pagehide', function(e) {
   var html=$('#container1')[0].outerHTML;
