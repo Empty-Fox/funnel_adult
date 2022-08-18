@@ -78,7 +78,8 @@
             <div class="greenRound"></div>
             <p>online</p>
           </div>
-          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img src="img/video-player.png" alt="image" loading="lazy"></div>
+          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img
+              src="img/video-player.png" alt="image" loading="lazy"></div>
           <div class="message_btn">
             <div class="messageButton">
               <img src="img/messenger.png" alt="image" loading="lazy">
@@ -133,7 +134,8 @@
             <div class="greenRound"></div>
             <p>online</p>
           </div>
-          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img src="img/video-player.png" alt="image" loading="lazy"></div>
+          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img
+              src="img/video-player.png" alt="image" loading="lazy"></div>
           <div class="message_btn">
             <div class="messageButton">
               <img src="img/messenger.png" alt="image" loading="lazy">
@@ -184,7 +186,8 @@
             <div class="greenRound"></div>
             <p>online</p>
           </div>
-          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img src="img/video-player.png" alt="image" loading="lazy"></div>
+          <div class="onerow onerow_icons"><img src="img/photo.png" alt="image" loading="lazy"><img
+              src="img/video-player.png" alt="image" loading="lazy"></div>
           <div class="message_btn">
             <div class="messageButton">
               <img src="img/messenger.png" alt="image" loading="lazy">
@@ -196,15 +199,35 @@
     </div>
 
     <div class="btns_row">
-      <button class="button-1"><a href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste" target="_blank">PREV</button>
-      <button class="button-2"><a href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste" target="_blank">NEXT</a></button>
+      <button class="button-1"><a
+          href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste"
+          target="_blank">PREV</button>
+      <button class="button-2"><a
+          href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste"
+          target="_blank">NEXT</a></button>
     </div>
     <div class="banner300x100 onclick_redirect">
       <!-- <p>BANNER 300x100</p> -->
-      <img src="img/300x100_2.gif" alt="baner" loading="lazy" >
+      <img src="img/300x100_2.gif" alt="baner" loading="lazy">
     </div>
+
+
+
+
   </div>
-  </div>
+  <footer class="footer">
+
+    <div style="pointer-events: none;">
+      <p>topdaing.chat © <span id="year_now">2020</span></p>
+    </div>
+    <div>
+      <div> <a href="documentation/privacy.html" target="_blank" class="footer__link">Privacy policy</a></div>
+      <div> <a href="documentation/terms.html" class="footer__link" target="_blank">Terms and conditions</a></div>
+      <div> <a href="documentation/cancelsubsc.html" class="footer__link" target="_blank">Cancel
+          Subscription</a></div>
+    </div>
+
+  </footer>
   <script src="js/jquery.min.js"></script>
   <script src="js/move_user.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -212,10 +235,10 @@
     AOS.init();
   </script>
   <script>
-    
-    $( ".onclick_redirect" ).click(function() {
+
+    $(".onclick_redirect").click(function () {
       window.open('https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste', '_blank');
-});
+    });
     //////////burger button//////////////
     const navigation = document.getElementById("nav");
     const menu = document.getElementById("menu");
@@ -225,6 +248,8 @@
       menu.classList.toggle("active");
     });
     //////////END burger button//////////////
+
+    document.getElementById("year_now").innerHTML = new Date().getFullYear();
   </script>
 
 
