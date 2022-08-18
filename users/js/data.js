@@ -13,13 +13,21 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-window.onbeforeunload = function(e) {
+// window.onbeforeunload = function(e) {
+  
+//   var html=$('#container1')[0].outerHTML;
+//   localStorage.removeItem("htmltest");
+//   localStorage.setItem('htmltest', 'html');
+//   return ;
+// }
+window.addEventListener('beforeunload', (event) => {
+  // Cancel the event as stated by the standard.
   event.preventDefault();
-  var html=$('#container1')[0].outerHTML;
-  localStorage.removeItem("htmltest");
+  // Chrome requires returnValue to be set.
+  event.returnValue = '';
   localStorage.setItem('htmltest', 'html');
-  return ;
-}
+});
+
 
 // ................................
 var user_name_ = localStorage.getItem("user_name");
