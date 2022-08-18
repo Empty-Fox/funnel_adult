@@ -13,10 +13,11 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-window.onbeforeunload = function() {
+window.onbeforeunload = function(e) {
+  event.preventDefault();
   var html=$('#container1')[0].outerHTML;
   localStorage.removeItem("htmltest");
-  localStorage.setItem('htmltest', html);
+  localStorage.setItem('htmltest', 'html');
   return ;
 }
 
