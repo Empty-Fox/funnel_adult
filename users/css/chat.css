@@ -74,22 +74,20 @@ body {
 }
 .messageText_p2 {
     text-align: right;
-    font-size: 1.4rem;
+    font-size: 16px;
     color: rgb(130 126 126);
 }
 
 #chat-form,
 #chat-title {    
     background: #655387;
-    font-size: 1.8rem;
-    box-sizing: border-box;
+    font-size: 1.8rem
 }
 
 #chat-title img {
     width: 60px;
     border-radius: 100%;
     box-shadow: 0 0 0 2px #d9d9d9, 0 0 13px #d9d9d9;
-    height: 60px;
 }
 
 #chat-title {
@@ -120,7 +118,7 @@ body {
 .message-row {
     display: grid;
     grid-template-columns: 70%;
-    margin-bottom: 20px
+    margin-bottom: 40px
 }
 
 .message-content {
@@ -219,7 +217,7 @@ img.message-text_img {
 
 .message-text_pop {
     padding: 9px 14px;
-    font-size: 1.4rem;
+    font-size: 16px;
     margin-bottom: 5px
 }
 
@@ -261,11 +259,7 @@ img.message-text_img {
     grid-area: chat-form;
     border-top: 1px solid rgba(0, 0, 0, .25);
     padding-left: 20px;
-    padding-right: 20px;
-        position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
+    padding-right: 20px
 }
 
 #chat-form input {
