@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimal-ui">
     <title>Top Dating</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/chat.css">
     <!-- <link rel="icon" href="images/icon.png" sizes="16x16" type="image/png">   -->
@@ -146,15 +146,9 @@
         // ///////end message time/////////////
 
         ////////////висота вікна сайта в моб......
-      // ............висота для моб щоб 100vh була: .............
-(function init100vh(){
-  function setHeight() {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-  setHeight();
-  window.addEventListener('resize', setHeight);
-})();
+        const vh = window.innerHeight / 100;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
         ///////////////////////////////////////click back in chats/////////////////////////////////      
 
         $("#id_back").on("click", click_backBTN);
