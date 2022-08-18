@@ -13,20 +13,14 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-// window.onbeforeunload = function(e) {
+window.onbeforeunload = function(e) {
   
-//   var html=$('#container1')[0].outerHTML;
-//   localStorage.removeItem("htmltest");
-//   localStorage.setItem('htmltest', 'html');
-//   return ;
-// }
-window.addEventListener('beforeunload', (event) => {
-  // Cancel the event as stated by the standard.
-  event.preventDefault();
-  // Chrome requires returnValue to be set.
-  event.returnValue = '';
-  localStorage.setItem('htmltest', 'html');
-});
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+  return ;
+}
+
 
 
 // ................................
@@ -100,16 +94,16 @@ var local_count=0;
 
 
 if(localStorage.getItem("click_one_one") == null){
-  alert('--- null');
+  alert('--- null'+localStorage.getItem("click_one_one"));
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
-  alert('--- 00000'+localStorage.getItem('htmltest'));
+  alert('--- 00000'+localStorage.getItem("click_one_one"));
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
-  alert('--- 1111111'+localStorage.getItem('htmltest'));
+  alert('--- 1111111'+localStorage.getItem("click_one_one"));
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot2();
 }
