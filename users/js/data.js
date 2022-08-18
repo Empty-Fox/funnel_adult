@@ -1,4 +1,4 @@
-/////////////////time in message minutes with 0 /////////////////
+//////////////////time in message minutes with 0 /////////////////
 function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
@@ -175,7 +175,7 @@ function bot_message(){
       console.log('click_one_one2: '+click_one_one);
       if(localStorage.getItem("click_one_one") == 3){
         console.log('33333');
-        // timer_bot4();     
+        timer_bot4();     
       }   
     }, 8000);    
   }
