@@ -81,7 +81,8 @@ body {
 #chat-form,
 #chat-title {    
     background: #655387;
-    font-size: 1.8rem
+    font-size: 1.8rem;
+    box-sizing: border-box;
 }
 
 #chat-title img {
