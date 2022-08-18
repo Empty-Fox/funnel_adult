@@ -253,8 +253,8 @@ img.message-text_img {
 }
 
 #chat-form {
-    display: grid;
-    grid: 32px/1fr auto;
+    /* display: grid;
+    grid: 32px/1fr auto; */
     align-content: center;
     align-items: center;
     grid-gap: 15px;
@@ -266,6 +266,7 @@ img.message-text_img {
     bottom: 0;
     width: 100%;
     height: 70px;
+    box-sizing: border-box;
 }
 
 #chat-form input {
@@ -283,10 +284,6 @@ img.message-text_img {
 
 ::-webkit-scrollbar {
     display: none
-}
-
-#chat-form {
-    display: grid;
 }
 
 #chat-message-list {
