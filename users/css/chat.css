@@ -51,16 +51,10 @@ body {
     display: grid;
     grid: 'chat-title' 67px 'chat-message-list' auto 'chat-form' 60px;       
     max-width: 100%;   
-    width: 100%;
-   
+    width: 100%;   
     background-color: #a9dbd8;
     border-radius: 0;
     height: 100%;
-
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
-
-
 }
 #chat-form img, #id_back {
     filter: brightness(0) invert(1);
