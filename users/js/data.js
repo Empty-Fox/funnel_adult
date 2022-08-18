@@ -95,16 +95,30 @@ var local_count=0;
 
 if(localStorage.getItem("click_one_one") == null){
   alert('--- null'+localStorage.getItem("click_one_one"));
+
+  
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
   alert('--- 00000'+localStorage.getItem("click_one_one"));
-  $("#container1").replaceWith('454545');
+  $("#container1").replaceWith(localStorage.getItem('htmltest'));
+
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+
+
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
   alert('--- 1111111'+localStorage.getItem("click_one_one"));
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
+
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+
+  
   timer_bot2();
 }
 if(localStorage.getItem("click_one_one") == 2){
