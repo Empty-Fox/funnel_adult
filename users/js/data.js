@@ -2,7 +2,6 @@
 function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 }
-
 // ............висота для моб щоб 100vh була: .............
 (function init100vh(){
   function setHeight() {
