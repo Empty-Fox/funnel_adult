@@ -259,8 +259,8 @@ img.message-text_img {
 }
 
 #chat-form {
-    display: grid;
-    grid: 32px/1fr auto;
+    /* display: grid;
+    grid: 32px/1fr auto; */
     align-content: center;
     align-items: center;
     grid-gap: 15px;
