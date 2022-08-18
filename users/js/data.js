@@ -41,13 +41,15 @@ $(window).on('pagehide', function(e) {
   localStorage.setItem('htmltest', html);
   
   e.preventDefault();
+  return ;
 })
 
 window.unload = function() {
   var html=$('#container1')[0].outerHTML;
   localStorage.removeItem("htmltest");
   localStorage.setItem('htmltest', html);
-    clearTimeout(timeout)
+    clearTimeout(timeout);
+    return ;
 };
 //////////////END ////////////////////////////////////////////////
 
