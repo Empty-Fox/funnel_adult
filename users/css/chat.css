@@ -50,7 +50,7 @@ body {
 
 #chat-container {
     display: grid;
-    grid: 'chat-title' 67px 'chat-message-list' auto 'chat-form' 70px/1fr;
+    grid: 'chat-title' 67px 'chat-message-list' auto 'chat-form' 70px;
        
     max-width: 100%;
     max-height: 100%;
