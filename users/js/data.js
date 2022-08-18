@@ -19,12 +19,7 @@ window.onbeforeunload = function() {
   localStorage.setItem('htmltest', html);
   return ;
 }
-window.unload = function() {
-  var html=$('#container1')[0].outerHTML;
-  localStorage.removeItem("htmltest");
-  localStorage.setItem('htmltest', html);
-  return ;
-}
+
 // ................................
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
@@ -96,11 +91,11 @@ var local_count=0;
 
 
 if(localStorage.getItem("click_one_one") == null){
-  console.log('--- null');
+  alert('--- null');
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
-  console.log('--- 00000');
+  alert('--- 00000');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
