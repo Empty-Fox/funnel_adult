@@ -1,7 +1,3 @@
-input.onfocus = function () {
-  window.scrollTo(0, 0);
-  document.body.scrollTop = 0;
-}
 /////////////////time in message minutes with 0 /////////////////
 function minutes_with_leading_zeros(today) {
   return (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
