@@ -100,21 +100,24 @@ if(localStorage.getItem("click_one_one") == 0){
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
-  console.log('--- 1111111');
+  alert('--- 1111111'+localStorage.getItem('htmltest'));
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot2();
 }
 if(localStorage.getItem("click_one_one") == 2){
+  alert('--- 22222222'+localStorage.getItem('htmltest'));
   console.log('--- 2222');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot3();
 }
 if(localStorage.getItem("click_one_one") == 3){
+  alert('--- 33'+localStorage.getItem('htmltest'));
   console.log('--- 3333333');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot4();
 }
 if(localStorage.getItem("click_one_one") == 4){
+  alert('--- 4444444444'+localStorage.getItem('htmltest'));
   console.log('--- 4444444444');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   document.getElementById("opacityBlock").style.display = 'block';
