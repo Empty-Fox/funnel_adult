@@ -43,12 +43,12 @@ $(window).on('pagehide', function(e) {
   e.preventDefault();
 })
 
-// window.unload = function() {
-//   var html=$('#container1')[0].outerHTML;
-//   localStorage.removeItem("htmltest");
-//   localStorage.setItem('htmltest', html);
-//     clearTimeout(timeout)
-// };
+window.unload = function() {
+  var html=$('#container1')[0].outerHTML;
+  localStorage.removeItem("htmltest");
+  localStorage.setItem('htmltest', html);
+    clearTimeout(timeout)
+};
 //////////////END ////////////////////////////////////////////////
 
 // ................................
