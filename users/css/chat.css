@@ -11,13 +11,10 @@ html {
     height: 100%
 }
 body {
-    /* display: grid; */
+    display: grid;
     place-items: center;
     background-color: #fff;
     font-family: Kanit, sans-serif;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
     /* ..........для висоти моб...... */
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
@@ -52,8 +49,8 @@ body {
 }
 
 #chat-container {
-    /* display: grid;
-    grid: 'chat-title' 67px 'chat-message-list' auto 'chat-form' 60px/1fr; */
+    display: grid;
+    grid: 'chat-title' 67px 'chat-message-list' auto 'chat-form' 60px/1fr;
        
     max-width: 100%;
     max-height: 100%;
@@ -71,7 +68,6 @@ body {
     z-index: 9;
     right: 5%;
     top: 15px;
-    display: none;
 }
 #id_back:hover {
     cursor: pointer;
@@ -97,8 +93,7 @@ body {
 }
 
 #chat-title {
-    /* display: grid; */
-    display: none;
+    display: grid;
     grid-template-columns: 80px auto;
     align-content: center;
     align-items: center;
@@ -115,8 +110,7 @@ body {
 
 #chat-message-list {
     grid-area: chat-message-list;
-    /* display: flex; */
-    display: none;
+    display: flex;
     flex-direction: column-reverse;
     padding: 0 20px;
     overflow-y: scroll;
@@ -259,8 +253,8 @@ img.message-text_img {
 }
 
 #chat-form {
-    /* display: grid;
-    grid: 32px/1fr auto; */
+    display: grid;
+    grid: 32px/1fr auto;
     align-content: center;
     align-items: center;
     grid-gap: 15px;
@@ -272,7 +266,6 @@ img.message-text_img {
     bottom: 0;
     width: 100%;
     height: 70px;
-    box-sizing: border-box;
 }
 
 #chat-form input {
@@ -281,7 +274,7 @@ img.message-text_img {
     border: 2px solid #ddd;
     color: #330;
     border-radius: 6px;
-    font-size: 1.4rem
+    font-size: 16px;
 }
 
 #chat-form img {
@@ -290,6 +283,14 @@ img.message-text_img {
 
 ::-webkit-scrollbar {
     display: none
+}
+
+#chat-form {
+    display: grid;
+}
+
+#chat-message-list {
+    display: flex;
 }
 
 
@@ -388,8 +389,3 @@ img.message-text_img {
     }
 
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    select:focus, textarea:focus, input:focus {
-            font-size: 16px;
-        }
-    }
