@@ -13,13 +13,13 @@ function minutes_with_leading_zeros(today) {
 })();
 // ...........................................
 
-window.onbeforeunload = function() {
-  var html=$('#container1')[0].outerHTML;
-  localStorage.removeItem("htmltest");
-  localStorage.setItem('htmltest', html);
+// window.onbeforeunload = function() {
+//   var html=$('#container1')[0].outerHTML;
+//   localStorage.removeItem("htmltest");
+//   localStorage.setItem('htmltest', html);
 
-  return ;
-}
+//   return ;
+// }
 
 var timeout;
 $(window).on("beforeunload", function(event) {
