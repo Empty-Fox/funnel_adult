@@ -67,35 +67,35 @@ var click_one_one = localStorage.getItem("click_one_one");
   $(".user_accountPhoto").attr("src",user_accountPhoto_);
   $( ".userName_val" ).addClass( user_name_count_ );
  
-  console.log('user_name_: '+user_name_);
-  console.log('user_accountPhoto_: '+user_accountPhoto_);
-  console.log('user_name_count_: '+user_name_count_);
-  console.log('value_click: '+click_two);
-  console.log('--- click_one_one: '+click_one_one);
-  console.log('user_account: '+user_account);
-  console.log(localStorage.getItem('htmltest'));
+  // console.log('user_name_: '+user_name_);
+  // console.log('user_accountPhoto_: '+user_accountPhoto_);
+  // console.log('user_name_count_: '+user_name_count_);
+  // console.log('value_click: '+click_two);
+  // console.log('--- click_one_one: '+click_one_one);
+  // console.log('user_account: '+user_account);
+  // console.log(localStorage.getItem('htmltest'));
 
 
 } else {} 
 
 
-console.log("data.js new")
+// console.log("data.js new")
 if ($("#chat-title").find(".user_name").hasClass('user_name1')) {
-  console.log('user_name1')
+  // console.log('user_name1')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
   var photoUser1 = ["images/10.jpg"]
 }
 if ($("#chat-title").find(".user_name").hasClass('user_name2')) {
-  console.log('user_name2')
+  // console.log('user_name2')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
   var photoUser1 = ["images/10.jpg"]
 }
 if ($("#chat-title").find(".user_name").hasClass('user_name3')) {
-  console.log('user_name3')
+  // console.log('user_name3')
   var botMessage = [["Hey dude,💜I have something hot for you", "Do you wanna to see nudes?",
     "Just wait a few seconds . . . I'll send you of my 🍑 and 🍒",
     "Like it ?"]];
@@ -128,31 +128,31 @@ var local_count=0;
 
 
 if(localStorage.getItem("click_one_one") == null){
-  console.log('--- null');
+  // console.log('--- null');
   bot_message();
 }
 if(localStorage.getItem("click_one_one") == 0){
-  console.log('--- 00000');
+  // console.log('--- 00000');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot1();
 }
 if(localStorage.getItem("click_one_one") == 1){
-  console.log('--- 1111111');
+  // console.log('--- 1111111');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot2();
 }
 if(localStorage.getItem("click_one_one") == 2){
-  console.log('--- 2222');
+  // console.log('--- 2222');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot3();
 }
 if(localStorage.getItem("click_one_one") == 3){
-  console.log('--- 3333333');
+  // console.log('--- 3333333');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   timer_bot4();
 }
 if(localStorage.getItem("click_one_one") == 4){
-  console.log('--- 4444444444');
+  // console.log('--- 4444444444');
   $("#container1").replaceWith(localStorage.getItem('htmltest'));
   document.getElementById("opacityBlock").style.display = 'block';
   document.querySelectorAll(".stylick").forEach(a => a.style.display = "block");
@@ -167,9 +167,9 @@ function bot_message(){
     var click_one_one = 0;
     localStorage.removeItem("click_one_one")
     localStorage.setItem("click_one_one", click_one_one);
-    console.log('click_one_one: '+click_one_one);   
+    // console.log('click_one_one: '+click_one_one);   
     if(localStorage.getItem("click_one_one") == 0){
-      console.log('00000');
+      // console.log('00000');
       timer_bot1();     
     }   
   }, 3000);
@@ -181,9 +181,9 @@ function bot_message(){
       var click_one_one = 1;
       localStorage.removeItem("click_one_one")
       localStorage.setItem("click_one_one", click_one_one);
-      console.log('click_one_one1: '+click_one_one);
+      // console.log('click_one_one1: '+click_one_one);
       if(localStorage.getItem("click_one_one") == 1){
-        console.log('11111111');
+        // console.log('11111111');
         timer_bot2();     
       }   
     }, 6000);
@@ -195,9 +195,9 @@ function bot_message(){
       var click_one_one = 2;
       localStorage.removeItem("click_one_one")
       localStorage.setItem("click_one_one", click_one_one);
-      console.log('click_one_one2: '+click_one_one);
+      // console.log('click_one_one2: '+click_one_one);
       if(localStorage.getItem("click_one_one") == 2){
-        console.log('222222');
+        // console.log('222222');
         timer_bot3();     
       }   
     }, 8000);    
@@ -208,9 +208,9 @@ function bot_message(){
       var click_one_one = 3;
       localStorage.removeItem("click_one_one")
       localStorage.setItem("click_one_one", click_one_one);
-      console.log('click_one_one2: '+click_one_one);
+      // console.log('click_one_one2: '+click_one_one);
       if(localStorage.getItem("click_one_one") == 3){
-        console.log('33333');
+        // console.log('33333');
         timer_bot4();     
       }   
     }, 8000);    
@@ -221,7 +221,7 @@ function bot_message(){
         var click_one_one = 4;
         localStorage.removeItem("click_one_one")
         localStorage.setItem("click_one_one", click_one_one);
-        console.log('click_one_one3: '+click_one_one);       
+        // console.log('click_one_one3: '+click_one_one);       
       }, 10000); 
     
   }

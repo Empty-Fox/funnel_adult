@@ -1,4 +1,4 @@
-console.log("move_user.js")
+// console.log("move_user.js")
   
   $('.messageButton').on('click', function () {    
     var user_name = $(this).closest(".account_girl ").find(".user_name").text();

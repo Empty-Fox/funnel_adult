@@ -269,14 +269,14 @@ $(document).keydown(function(e){
   </script>
   <script>
 function redirect_func(className_attr, param){
-  console.log(className_attr.className);
-  console.log('banner300x100_img');
-  console.log(param);
+  // console.log(className_attr.className);
+  // console.log('banner300x100_img');
+  // console.log(param);
   if(className_attr.className == 'banner300x100_img'||className_attr.className == 'banner300x250_img'){
     var img_src = className_attr.src;
     var img_name = img_src.substring(img_src.lastIndexOf('/')+1);  
 
-    // var searchString = new URLSearchParams(param);
+    var searchString_static = new URLSearchParams(param);
     var searchString = new URLSearchParams(window.location.search);
 
     var get_campId = searchString.get('camp_id');
@@ -284,7 +284,7 @@ function redirect_func(className_attr, param){
     var get_sourceId = searchString.get('source_id');
     var get_catId = searchString.get('cat_id');
     var get_keyId = searchString.get('key_id');
-    var get_adFform = searchString.get('ad_form');
+    var get_adFform = searchString_static.get('ad_form');
 
     var campId = get_campId;
     var banId = get_banId;
@@ -296,7 +296,7 @@ function redirect_func(className_attr, param){
     
     var link_with_parametr = param.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}&ad_form=${adFform}&ad_id=${adId}`);
     
-    console.log(link_with_parametr);
+    // console.log(link_with_parametr);
     window.open(link_with_parametr, '_blank');
 
  
@@ -304,7 +304,7 @@ function redirect_func(className_attr, param){
   if(className_attr.className == 'titleBryndon'){
     var text_content = (className_attr.textContent).split(' ').join('');   
 
-    // var searchString = new URLSearchParams(param);
+     var searchString_static = new URLSearchParams(param);
     var searchString = new URLSearchParams(window.location.search);
 
     var get_campId = searchString.get('camp_id');
@@ -312,7 +312,7 @@ function redirect_func(className_attr, param){
     var get_sourceId = searchString.get('source_id');
     var get_catId = searchString.get('cat_id');
     var get_keyId = searchString.get('key_id');
-    var get_adFform = searchString.get('ad_form');
+    var get_adFform = searchString_static.get('ad_form');
 
     var campId = get_campId;
     var banId = get_banId;
@@ -324,7 +324,7 @@ function redirect_func(className_attr, param){
     
     var link_with_parametr = param.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}&ad_form=${adFform}&ad_id=${adId}`);
     
-    console.log(link_with_parametr);
+    // console.log(link_with_parametr);
      window.open(link_with_parametr, '_blank');
 
   }
@@ -454,7 +454,7 @@ let getRandomtext = () => {
 
   document.getElementsByClassName("titleBryndon")[0].innerHTML = random_text[randomNum5];
   document.getElementsByClassName("titleBryndon")[1].innerHTML = random_text[randomNum6];
-  console.log(random_text[randomNum5])
+  // console.log(random_text[randomNum5])
 };
 
 
