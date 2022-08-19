@@ -109,7 +109,7 @@ body {
     flex-direction: column-reverse;
     padding: 0 20px;
     overflow-y: scroll;
-    background-color: #ead3ff;
+    background-color: #ead3ff;     
 }
 
 .message-row {

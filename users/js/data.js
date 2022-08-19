@@ -57,7 +57,10 @@ window.unload = function() {
 var user_name_ = localStorage.getItem("user_name");
 var user_accountPhoto_ = localStorage.getItem("user_accountPhoto");
 var user_name_count_ = localStorage.getItem("user_name_count");
-var click_two = localStorage.getItem("value_click");  
+var click_two = localStorage.getItem("value_click"); 
+var user_account = localStorage.getItem("user_account"); 
+
+
 var click_one_one = localStorage.getItem("click_one_one");  
  if (click_two == 1) { 
   $('.userName_val').text(user_name_); 
@@ -69,6 +72,7 @@ var click_one_one = localStorage.getItem("click_one_one");
   console.log('user_name_count_: '+user_name_count_);
   console.log('value_click: '+click_two);
   console.log('--- click_one_one: '+click_one_one);
+  console.log('user_account: '+user_account);
   console.log(localStorage.getItem('htmltest'));
 
 

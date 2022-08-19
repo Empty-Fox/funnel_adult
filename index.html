@@ -32,10 +32,10 @@
   </nav>
   <div class="main_block">
     <p class="firstText"><span class="colorRed">27 girls </span>found around 5 miles</p>
-    <div class="banner300x100 onclick_redirect">
-      <img src="img/300x100_1.gif" alt="baner" loading="lazy">
+    <div class="banner300x100">
+      <img class="banner300x100_img" src="img/300x100_1.gif" alt="baner" loading="lazy" onclick="redirect_func(this, 'https://trusersregacy.com/22db3881-1460-4025-a338-2059c83368d8?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=top31&ad_id=paste')">
     </div>
-    <p class="titleBryndon onclick_redirect">Sex Request</p>
+    <p class="titleBryndon" onclick="redirect_func(this, 'https://trusersregacy.com/d0b21892-10bc-4245-b114-33fee539148a?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=toptxt&ad_id=paste')">Sex Request</p>
     <div class="container_withGirl">
       <div class="container_withGirl_block">
         <div class="account_girl " data-aos="fade-up">
@@ -90,7 +90,7 @@
       </div>
     </div>
     <div class="banner300x250 onclick_redirect">
-      <img src="img/300x250_1.jpeg" alt="baner" loading="lazy">
+      <img class="banner300x250_img" src="img/300x250_1.jpeg" alt="baner" loading="lazy" onclick="redirect_func(this, 'https://trusersregacy.com/d0ec8bb3-8fae-4189-95d3-026020e584e3?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=mid32&ad_id=paste')">
     </div>
     <div class="container_withGirl">
       <div class="container_withGirl_block">
@@ -144,7 +144,7 @@
           </div>
         </div>
       </div>
-      <p class="titleBryndon onclick_redirect">received (1) nudes</p>
+      <p class="titleBryndon" onclick="redirect_func(this, 'https://trusersregacy.com/50390ea8-6f41-4ff6-a976-030bb1dcf04b?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=bottxt&ad_id=paste')">received (1) nudes</p>
       <div class="container_withGirl_block">
         <div class="account_girl" data-aos="fade-up">
           <div class="block_img"><img src="img/1image4.png" alt="image" loading="lazy"></div>
@@ -200,15 +200,15 @@
 
     <div class="btns_row">
       <button class="button-1"><a
-          href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste"
+          href="https://trusersregacy.com/7718b9da-5583-4ea7-bdca-2979bd2c9d0c?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=nextbtn&ad_id=next"
           target="_blank">PREV</button>
       <button class="button-2"><a
-          href="https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste"
+          href="https://trusersregacy.com/8d7907e3-cf67-40a0-b549-7017d58f2a17?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=prevbtn&ad_id=prev"
           target="_blank">NEXT</a></button>
     </div>
     <div class="banner300x100 onclick_redirect">
       <!-- <p>BANNER 300x100</p> -->
-      <img src="img/300x100_2.gif" alt="baner" loading="lazy">
+      <img class="banner300x100_img" src="img/300x100_2.gif" alt="baner" loading="lazy" onclick="redirect_func(this, 'https://trusersregacy.com/88f38fe8-535b-4081-bb82-bd47c55e4a4b?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=bot31&ad_id=paste')">
     </div>
 
  </div>
@@ -225,6 +225,14 @@
     </div>
 
   </footer>
+  <div class="mymodal">
+    <div class="overlay">
+      <div class="content">
+        <p class="close">x</p>
+        <img class="banner300x250_img" src="img/300x250_1.jpeg" alt="baner" loading="lazy" onclick="redirect_func(this, 'https://trusersregacy.com/d0ec8bb3-8fae-4189-95d3-026020e584e3?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste&ad_form=mid32&ad_id=paste')">
+      </div>
+    </div>
+  </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/move_user.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -232,10 +240,90 @@
     AOS.init();
   </script>
   <script>
+   //////////modal////////////
+var modal = $('.mymodal');
+function setModal(display){
+  modal.css('display', display);
+}
+setModal('block');
+$('.close').click(function(){
+  setModal('none');
+});
+$(modal).click(function(e){
+  var target = e.target;
+  if(!($('.content').is(target)) && $('.content').has(target).length ===0){
+    setModal('none');
+  }
+});
+//////////close modal by buton escape/////////////
+$(document).keydown(function(e){
+  if(e.which == 27 ){
+    setModal('none');
+  }
+});
+///////////////////////////////////////////////////////////
+  </script>
+  <script>
+function redirect_func(className_attr, param){
 
-    $(".onclick_redirect").click(function () {
-      window.open('https://trusersregacy.com/de4450ad-dcbd-4228-8f1e-a005150378dc?camp_id=paste&ban_id=paste&source_id=paste&cat_id=paste&key_id=paste', '_blank');
-    });
+  if(className_attr.className == 'banner300x100_img'){
+    var img_src = className_attr.src;
+    var img_name = img_src.substring(img_src.lastIndexOf('/')+1);  
+
+    var searchString = new URLSearchParams(param);
+
+    var get_campId = searchString.get('camp_id');
+    var get_banId = searchString.get('ban_id');
+    var get_sourceId = searchString.get('source_id');
+    var get_catId = searchString.get('cat_id');
+    var get_keyId = searchString.get('key_id');
+    var get_adFform = searchString.get('ad_form');
+
+    var campId = get_campId;
+    var banId = get_banId;
+    var sourceId = get_sourceId;
+    var catId = get_catId;
+    var keyId = get_keyId;
+    var adFform = get_adFform;
+    var adId = img_name;
+    
+    var link_with_parametr = param.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}&ad_form=${adFform}&ad_id=${adId}`);
+    
+    console.log(link_with_parametr);
+    window.open(link_with_parametr, '_blank');
+
+ 
+  }
+  if(className_attr.className == 'titleBryndon'){
+    var text_content = (className_attr.textContent).split(' ').join('');   
+
+    var searchString = new URLSearchParams(param);
+
+    var get_campId = searchString.get('camp_id');
+    var get_banId = searchString.get('ban_id');
+    var get_sourceId = searchString.get('source_id');
+    var get_catId = searchString.get('cat_id');
+    var get_keyId = searchString.get('key_id');
+    var get_adFform = searchString.get('ad_form');
+
+    var campId = get_campId;
+    var banId = get_banId;
+    var sourceId = get_sourceId;
+    var catId = get_catId;
+    var keyId = get_keyId;
+    var adFform = get_adFform;
+    var adId = text_content;
+    
+    var link_with_parametr = param.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}&ad_form=${adFform}&ad_id=${adId}`);
+    
+    console.log(link_with_parametr);
+    window.open(link_with_parametr, '_blank');
+
+  }
+
+
+}
+
     //////////burger button//////////////
     const navigation = document.getElementById("nav");
     const menu = document.getElementById("menu");
@@ -249,6 +337,123 @@
     document.getElementById("year_now").innerHTML = new Date().getFullYear();
   </script>
 
+
+<script>
+  let getRandomImage_100x300 = () => {
+    var images_100x300 = new Array(
+      "img/300x100/31_1.gif",
+      "img/300x100/31_2.gif",
+      "img/300x100/31_3.gif",
+      "img/300x100/31_4.gif",
+      "img/300x100/31_5.gif",
+      "img/300x100/31_6.gif",
+      "img/300x100/31_7.gif",
+      "img/300x100/31_8.gif",
+      "img/300x100/31_9.gif",
+      "img/300x100/31_10.gif",
+      "img/300x100/31_11.gif",
+      "img/300x100/31_12.gif",
+      "img/300x100/31_13.gif",
+      "img/300x100/31_14.gif",
+      "img/300x100/31_15.gif",
+      "img/300x100/31_16.gif",
+      "img/300x100/31_17.gif",
+      "img/300x100/31_18.gif",
+      "img/300x100/31_19.gif",
+      "img/300x100/31_20.gif"      
+  );
+ 
+  var randomNum1 = Math.floor(Math.random() * images_100x300.length);
+  var randomNum2 = Math.floor(Math.random() * images_100x300.length);
+
+ 
+  if (randomNum1 == randomNum2) {
+      return getRandomImage_100x300();
+  }
+
+
+  document.getElementsByClassName("banner300x100_img")[0].src = images_100x300[randomNum1];
+  document.getElementsByClassName("banner300x100_img")[1].src = images_100x300[randomNum2];
+};
+
+let getRandomImage_300x250 = () => {   
+  var images_300x250 = new Array(
+      "img/300x250/32_1.gif",
+      "img/300x250/32_2.gif",
+      "img/300x250/32_3.jpeg",
+      "img/300x250/32_4.gif",
+      "img/300x250/32_5.jpeg",
+      "img/300x250/32_6.gif",
+      "img/300x250/32_7.gif",
+      "img/300x250/32_8.gif",
+      "img/300x250/32_9.gif",
+      "img/300x250/32_10.gif",
+      "img/300x250/32_11.gif",
+      "img/300x250/32_11.png",
+      "img/300x250/32_12.gif",
+      "img/300x250/32_13.jpeg",
+      "img/300x250/32_14.gif",
+      "img/300x250/32_15.gif",
+      "img/300x250/32_16.gif",
+      "img/300x250/32_17.gif",
+      "img/300x250/32_18.gif",
+      "img/300x250/32_19.gif",
+      "img/300x250/32_20.gif",
+      "img/300x250/32_21.gif",
+      "img/300x250/32_22.gif",
+      "img/300x250/32_23.gif",
+      "img/300x250/32_24.gif",
+      "img/300x250/32_25.gif",
+  );
+  var randomNum3 = Math.floor(Math.random() * images_300x250.length);
+  var randomNum4 = Math.floor(Math.random() * images_300x250.length);
+
+  if (randomNum3 == randomNum4) {
+      return getRandomImage_300x250();
+  }
+
+  document.getElementsByClassName("banner300x250_img")[0].src = images_300x250[randomNum3];
+  document.getElementsByClassName("banner300x250_img")[1].src = images_300x250[randomNum4];
+};
+let getRandomtext = () => {
+    var random_text = new Array(
+      "Sex Request",
+      "New Sex Request",
+      "Meet&Fuck",
+      "New (1) Local Contact",
+      "New (3) Local Contact",
+      "Received (1) Message",
+      "Received (3) Message",
+      "Received (1) Nudes",
+      "Received (3) Nudes",
+      "Fuck Request",
+      "New Fuck Requests (7)",
+      "New Messages (3)",
+      "New Messages (7)",
+      "New FUCK Requests (3)",
+      "New FUCK Requests (7)",
+      "Fuck Local Girls"   
+  );
+ 
+  var randomNum5 = Math.floor(Math.random() * random_text.length);
+  var randomNum6 = Math.floor(Math.random() * random_text.length);
+
+ 
+  if (randomNum5 == randomNum6) {
+      return getRandomtext();
+  }
+
+
+  document.getElementsByClassName("titleBryndon")[0].innerHTML = random_text[randomNum5];
+  document.getElementsByClassName("titleBryndon")[1].innerHTML = random_text[randomNum6];
+  console.log(random_text[randomNum5])
+};
+
+
+getRandomImage_100x300();
+getRandomImage_300x250();
+getRandomtext();
+</script>
 
 </body>
 

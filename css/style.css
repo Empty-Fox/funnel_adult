@@ -8,6 +8,7 @@
 * {
   scroll-behavior: smooth;
 }
+
 html,
 body {
   padding: 0;
@@ -16,10 +17,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .logo_image {
   width: 180px;
   height: auto;
 }
+
 body {
   background: #ead3ff;
   -webkit-background-size: cover;
@@ -27,9 +30,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
 .onclick_redirect:hover {
   cursor: pointer;
 }
+
 .padding5 {
   padding: 0 5px;
 }
@@ -48,50 +53,61 @@ body {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  gap:10px;
+  gap: 10px;
   border: none;
 }
+
 .messageButton p {
   font-size: 20px;
   margin: 0;
 }
+
 .message_btn i {
   font-size: 22px;
 }
+
 button:hover {
   cursor: pointer;
 }
+
 .onerow {
   z-index: 9;
   display: flex;
   align-items: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
+
 .account_style {
   text-align: left;
   font-size: 20px;
 }
+
 .onerow img {
   width: 90px;
   height: auto;
 }
+
 .messageButton img {
   width: 60px;
   height: auto;
 }
+
 .onerow p {
   font-size: 26px;
   margin: 0;
   text-align: left;
 }
+
 .onerow.onerow_icons img {
-width: 70px;
-height: auto;
+  width: 70px;
+  height: auto;
 }
+
 .blockName p {
   margin: 0;
 }
+
 .blockName {
   padding: 10px 0;
   margin-left: -20px;
@@ -99,6 +115,7 @@ height: auto;
   flex-direction: column;
   justify-content: center;
 }
+
 .main_block {
   width: 100%;
   max-width: 880px;
@@ -107,6 +124,84 @@ height: auto;
   padding: 80px 10px 10px 10px;
   box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
+.mymodal {
+  display: none;
+}
+
+.mymodal .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.mymodal .content {
+  display: block;
+  margin: 20vh auto auto auto;
+  width: 500px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 20px;
+  color: #333333;
+  position: relative;
+}
+
+.mymodal .close {
+  transition: .5s;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #655387;
+  text-align: center;
+  border-radius: 100%;
+  color: white;
+  margin-top: -12px;
+  margin-right: -6px;
+  font-size: 20px;
+  line-height: 27px;
+
+
+}
+
+.mymodal .close:hover {
+  transform: rotate(180deg);
+}
+
+.mymodal img {
+  width: 100%;
+}
+
+@media(max-width:550px) {
+  .mymodal .content {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .banner300x100 {
   background-color: black;
@@ -118,6 +213,7 @@ height: auto;
   line-height: 100px;
   text-align: center;
 }
+
 .banner300x250 {
   background-color: black;
   width: 300px;
@@ -153,9 +249,10 @@ height: auto;
   font-size: 16px;
   font-weight: bold;
 }
-.titleBryndon { 
+
+.titleBryndon {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   text-decoration: underline;
   padding: 20px 0;
 }
@@ -203,7 +300,7 @@ height: auto;
   display: flex;
   align-items: flex-start;
   margin-left: -10px;
-  gap:10px;
+  gap: 10px;
   justify-content: space-evenly;
 }
 
@@ -215,6 +312,7 @@ height: auto;
   align-items: center;
   padding: 10px;
 }
+
 .account_girl>div:nth-child(1) p {
   position: absolute;
   background-color: #00000054;
@@ -224,57 +322,69 @@ height: auto;
   margin-top: -5px;
   margin-left: -15px;
 }
+
 .messageButton:hover img {
   cursor: pointer;
   transform: scale(1.25);
 }
+
 .container_withGirl_block:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
+
 .container_withGirl_block {
   transition: transform 500ms ease-in-out 25ms;
 }
+
 .messageButton:hover {
   cursor: pointer;
 }
+
 .button-1 {
   color: #fff;
   border: 3px solid #000000 !important;
-  background-image: -webkit-linear-gradient(30deg, #000000 50%, #ead3ff  50%);
-  background-image: linear-gradient(30deg, #000000 50%, #ead3ff  50%);
+  background-image: -webkit-linear-gradient(30deg, #000000 50%, #ead3ff 50%);
+  background-image: linear-gradient(30deg, #000000 50%, #ead3ff 50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
+
 .button-1:hover {
   background-position: 100%;
 }
+
 .button-1:hover a {
   color: #000000 !important;
 }
+
 .button-2 {
   color: #8c52ff !important;
   border: 3px solid #ffffff !important;
-  background-image: -webkit-linear-gradient(30deg, #ffffff 50%, #ead3ff  50%);
-  background-image: linear-gradient(30deg, #ffffff 50%, #ead3ff  50%);
+  background-image: -webkit-linear-gradient(30deg, #ffffff 50%, #ead3ff 50%);
+  background-image: linear-gradient(30deg, #ffffff 50%, #ead3ff 50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
+
 .button-2 a {
   color: #8c52ff !important;
 }
+
 .button-2:hover {
   background-position: 100%;
 }
+
 .button-2:hover a {
   color: #8c52ff !important;
 }
+
 .redblock {
   position: absolute;
   width: 100%;
@@ -284,10 +394,12 @@ height: auto;
   border-radius: 0 0 20px 20px;
   color: white;
 }
+
 .colorRed {
-  color:#ed0000;
+  color: #ed0000;
   font-weight: 600;
 }
+
 .firstText {
   color: #03000e;
   font-weight: bold;
@@ -314,18 +426,21 @@ height: auto;
   background-color: #655387;
   overflow: hidden;
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-around;
   align-items: center;
-  padding:10px;
+  padding: 10px;
 }
-footer>div:nth-child(2){
+
+footer>div:nth-child(2) {
   display: flex;
   gap: 10px;
   align-items: flex-end;
 }
-footer>div:nth-child(1){
- color: white;
+
+footer>div:nth-child(1) {
+  color: white;
 }
+
 .footer a {
   text-decoration: none
 }
@@ -346,134 +461,171 @@ footer>div:nth-child(1){
   .account_girl {
     height: 180px;
   }
+
   .redblock {
     height: 95px;
   }
+
   .btns_row button a {
     font-size: 20px;
   }
+
   .btns_row button {
     width: 180px;
   }
+
   .titleBryndon {
     font-size: 55px;
   }
+
   .main_block h1 {
     font-size: 70px;
   }
+
   .onerow p {
     font-size: 30px;
   }
+
   .blockName {
     padding: 0;
   }
+
   .block_online p {
     font-size: 30px;
   }
+
   .block_online {
     margin-left: 0px;
   }
-  .onerow i, .message_btn i {
+
+  .onerow i,
+  .message_btn i {
     font-size: 26px;
   }
+
   .messageButton p {
     font-size: 26px;
   }
+
   .onerow i:nth-child(2) {
     padding: 0 20px;
   }
 }
-@media (min-width:700px){
+
+@media (min-width:700px) {
   .btns_row button a {
     font-size: 26px;
   }
+
   .btns_row button {
     width: 200px;
   }
- 
+
   .titleBryndon {
     font-size: 65px;
   }
+
   .main_block h1 {
     font-size: 80px;
   }
+
   .account_girl {
     height: 250px;
   }
+
   .block_img img {
     width: 220px;
     height: 220px;
   }
-  .onerow i, .message_btn i {
+
+  .onerow i,
+  .message_btn i {
     font-size: 46px;
   }
+
   .account_style {
     font-size: 32px;
   }
+
   .block_online p {
     font-size: 32px;
   }
+
   .redblock {
     height: 125px;
   }
+
   .messageButton p {
     font-size: 36px;
   }
+
   .onerow p {
     font-size: 40px;
   }
 }
+
 @media (max-width:900px) {
- 
+
   .footer {
     height: 50px;
-  } 
-.footer a.footer__link {
-  font-size: 10px;
+  }
+
+  .footer a.footer__link {
+    font-size: 10px;
+  }
 }
-}
+
 @media (max-width:800px) {
   .greenRound {
     width: 25px;
     height: 25px;
     margin-top: 5px;
   }
+
   .block_online {
     gap: 0;
     justify-content: center;
   }
+
   .onerow.onerow_icons img {
     width: 70px;
     height: auto;
   }
+
   .onerow {
     gap: 10px;
   }
+
   .blockName {
     margin-left: -10px;
   }
+
   .message_btn {
     margin-left: -90px;
   }
 }
+
 @media (max-width:650px) {
 
   .footer {
     height: 70px;
   }
+
   .greenRound {
     width: 20px;
     height: 20px;
     margin-top: 8px;
   }
+
   .block_online {
-    padding: 5px 0;    
+    padding: 5px 0;
     gap: 0;
   }
-  
+
   .account_girl {
     height: 180px;
   }
+
   .redblock {
     height: 90px;
   }
@@ -481,140 +633,177 @@ footer>div:nth-child(1){
   .onerow img {
     width: 70px;
   }
+
   .onerow.onerow_icons img {
     width: 50px;
   }
+
   .messageButton img {
     width: 40px;
   }
+
   .account_style {
     font-size: 25px;
   }
 
 }
+
 @media (max-width:500px) {
   footer div:nth-child(2) {
     gap: 5px;
     flex-direction: column;
   }
+
   footer div:nth-child(1) {
     font-size: 14px;
   }
+
   .footer a.footer__link {
     font-size: 9px;
     line-height: 12px;
   }
+
   .messageButton img {
     width: 20px;
     height: auto;
-  }  
+  }
+
   .messageButton {
     gap: 3px;
   }
+
   .account_girl {
     height: 150px;
   }
+
   .redblock {
     height: 75px;
   }
+
   .btns_row button {
     min-height: 50px;
   }
+
   .onerow p {
     font-size: 18px;
   }
+
   .blockName {
     margin-left: -10px;
   }
+
   .account_girl img {
     width: 120px;
     height: 120px;
   }
+
   .onerow img {
     width: 40px;
     height: auto;
   }
+
   .onerow.onerow_icons img {
-    width: 35px;    
+    width: 35px;
   }
+
   .onerow {
     gap: 5px;
   }
+
   .messageButton img {
     width: 20px;
     height: auto;
   }
+
   .messageButton {
     padding: 15px 10px;
   }
+
   .messageButton p {
     font-size: 18px;
     margin: 0;
   }
+
   .message_btn {
     margin-left: -60px;
   }
+
   .account_style {
     font-size: 16px;
   }
+
   .block_online p {
     font-size: 16px;
   }
+
   .greenRound {
     width: 10px;
     height: 10px;
     margin-top: 4px;
   }
+
   .block_online {
     margin-left: 0;
     gap: 0;
     padding: 5px 0;
   }
 }
+
 @media (max-width:360px) {
   .greenRound {
     width: 10px;
     height: 10px;
   }
+
   .onerow img {
     width: 30px;
     height: auto;
   }
+
   .message_btn {
     margin-left: -65px;
   }
+
   .onerow.onerow_icons img {
     width: 30px;
   }
+
   .messageButton p {
     font-size: 16px;
     margin: 0;
   }
+
   .messageButton img {
     width: 25px;
     height: auto;
   }
+
   .messageButton {
     gap: 5px;
   }
 }
 
-@media (max-width:320px){
+@media (max-width:320px) {
   .account_girl {
     height: 130px;
   }
+
   .redblock {
     height: 65px;
   }
+
   .messageButton p {
     font-size: 18px;
   }
+
   .onerow i {
     font-size: 20px;
   }
+
   .blockName {
     margin-left: -26px;
   }
+
   .account_girl img {
     width: 80px;
     height: 80px;
@@ -624,45 +813,58 @@ footer>div:nth-child(1){
     width: 30px !important;
     height: auto !important;
   }
+
   .onerow.onerow_icons img {
     width: 30px !important;
     height: auto !important;
   }
+
   .block_online {
     margin-left: 0;
     gap: 0;
   }
+
   .messageButton img {
     width: 30px !important;
     height: auto !important;
   }
+
   .messageButton p {
     font-size: 14px;
   }
+
   .onerow i {
     font-size: 18px;
   }
+
   .onerow_icons {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .onerow_icons .padding5 {
     padding: 0;
   }
-  .banner300x250, .banner300x100 {
+
+  .banner300x250,
+  .banner300x100 {
     width: 98%;
   }
+
   .main_block h1 {
     font-size: 40px;
   }
+
   .messageButton {
     padding: 15px 10px;
   }
+
   .onerow {
     justify-content: center;
     gap: 0;
   }
 }
+
 @media (max-width:300px) {
   .firstText {
     color: #03000e;
@@ -671,27 +873,34 @@ footer>div:nth-child(1){
     padding: 0 0 20px 0;
     font-size: 16px;
   }
+
   .onerow img {
     width: 30px !important;
     height: auto !important;
   }
+
   .onerow p {
     font-size: 15px;
   }
+
   .block_online {
     margin-left: -10px;
   }
-  .onerow.onerow_icons img {    
+
+  .onerow.onerow_icons img {
     width: 25px !important;
     height: auto !important;
   }
+
   .messageButton img {
     width: 20px !important;
     height: auto !important;
   }
+
   .account_girl {
     height: 120px;
   }
+
   .redblock {
     height: 60px;
   }
@@ -740,7 +949,7 @@ nav ul {
   align-items: center;
   font-size: var(--font-size);
   overflow-y: hidden;
-  transition: 1s cubic-bezier(.68,-0.55,.27,10.55);
+  transition: 1s cubic-bezier(.68, -0.55, .27, 10.55);
 }
 
 nav ul li {
@@ -821,15 +1030,14 @@ nav .menu.active span:nth-child(2) {
     left: 0;
     top: 56px;
     height: var(--height);
-    transition: 1s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: 1s cubic-bezier(.68, -0.55, .27, 1.55);
   }
+
   nav ul.active {
-    --height: calc(
-      (((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber)
-    );
+    --height: calc((((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber));
     /*   (Block Level Padding + The Font Size) * The Number of Children   */
-    
-    
+
+
     transition: 1s ease;
   }
 
@@ -837,6 +1045,7 @@ nav .menu.active span:nth-child(2) {
     width: 100%;
     text-align: center;
   }
+
   nav ul li a {
     width: 100%;
     text-transform: capitalize;
