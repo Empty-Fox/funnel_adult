@@ -276,7 +276,8 @@ function redirect_func(className_attr, param){
     var img_src = className_attr.src;
     var img_name = img_src.substring(img_src.lastIndexOf('/')+1);  
 
-    var searchString = new URLSearchParams(param);
+    // var searchString = new URLSearchParams(param);
+    var searchString = new URLSearchParams(window.location.search);
 
     var get_campId = searchString.get('camp_id');
     var get_banId = searchString.get('ban_id');
@@ -303,7 +304,8 @@ function redirect_func(className_attr, param){
   if(className_attr.className == 'titleBryndon'){
     var text_content = (className_attr.textContent).split(' ').join('');   
 
-    var searchString = new URLSearchParams(param);
+    // var searchString = new URLSearchParams(param);
+    var searchString = new URLSearchParams(window.location.search);
 
     var get_campId = searchString.get('camp_id');
     var get_banId = searchString.get('ban_id');
@@ -460,6 +462,8 @@ getRandomImage_100x300();
 getRandomImage_300x250();
 getRandomtext();
 </script>
+
+
 
 </body>
 
