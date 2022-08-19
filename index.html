@@ -249,6 +249,10 @@ setModal('block');
 $('.close').click(function(){
   setModal('none');
 });
+$('.banner300x250_img').click(function(){
+  setModal('none');
+});
+
 $(modal).click(function(e){
   var target = e.target;
   if(!($('.content').is(target)) && $('.content').has(target).length ===0){
@@ -265,8 +269,10 @@ $(document).keydown(function(e){
   </script>
   <script>
 function redirect_func(className_attr, param){
-
-  if(className_attr.className == 'banner300x100_img'){
+  console.log(className_attr.className);
+  console.log('banner300x100_img');
+  console.log(param);
+  if(className_attr.className == 'banner300x100_img'||className_attr.className == 'banner300x250_img'){
     var img_src = className_attr.src;
     var img_name = img_src.substring(img_src.lastIndexOf('/')+1);  
 
@@ -317,7 +323,7 @@ function redirect_func(className_attr, param){
     var link_with_parametr = param.split('?')[0].concat(`?camp_id=${campId}&ban_id=${banId}&source_id=${sourceId}&cat_id=${catId}&key_id=${keyId}&ad_form=${adFform}&ad_id=${adId}`);
     
     console.log(link_with_parametr);
-    window.open(link_with_parametr, '_blank');
+    // window.open(link_with_parametr, '_blank');
 
   }
 
